@@ -39,7 +39,7 @@ git add -A && git commit -m "Describe your change" && git push
 | File | What it contains |
 |---|---|
 | `index.html` | Home: mission, **upcoming events**, "Join the WG" button |
-| `about.html` | History, **Members** (chairs, national representatives, members, former/honorary), How to participate |
+| `about.html` | History, **Members** (chairs & board incl. honorary chair, national representatives, members, former members) with LinkedIn/ORCID links, How to participate |
 | `guidelines.html` | IMIA recommendations, EFMI guidance, frameworks, "Coming soon" course design assistant |
 | `programmes.html` | Programme database (Baserow), certified courses, national lists, open data |
 | `activities.html` | Past events, **publications**, European projects |
@@ -48,6 +48,7 @@ git add -A && git commit -m "Describe your change" && git push
 | `privacy.html` | GDPR privacy notice |
 | `accessibility.html` | Accessibility statement (WCAG 2.1 AA) |
 | `404.html` | "Page not found" page |
+| `events/aaaa.mm.dd event/` | **One folder per event**: `index.html` (event page), `photos/`, `documents/` |
 | `assets/css/tokens.css` | **All colours** (EFMI palette, light and dark mode) |
 | `assets/css/main.css` | Layout and components |
 | `assets/js/site.js` | Mobile menu and light/dark toggle |
@@ -70,6 +71,19 @@ make the same change in **all** `.html` files. On your computer, use your editor
 In `index.html`, find `<!-- To add an event -->`, copy one `<article class="card">…</article>`
 block and edit the date, title and text. After the event, move it to `activities.html`
 (section `past-events`) as a new `<li>` at the top of the timeline.
+
+### Add a past event (folder + page)
+1. Create a folder in `events/` named `aaaa.mm.dd Event name` (e.g. `2026.10.29 EFMI STC 2026 Athens`).
+   Use the date of the WG session; avoid accents in the folder name.
+2. Copy `index.html` from an existing event folder into it, plus empty `photos/` and `documents/` folders.
+3. Edit the title, date, place and text. Add photos with a `<figure>` block and presentations as `<li>` links
+   (PDF preferred). Only publish photos and slides with the author's permission; write the credit in the caption.
+4. In `activities.html`, add a line at the top of the past-events timeline linking to the folder
+   (spaces become `%20`, e.g. `events/2026.10.29%20EFMI%20STC%202026%20Athens/`).
+
+### Add profile links to a member
+In `about.html`, each member has `<span class="profile-links">` with LinkedIn and ORCID links. ORCID iDs were matched by
+name and affiliation; ask each member to confirm theirs.
 
 ### Add a publication
 In `activities.html`, add a `<li>` to the right year inside `<ul class="pubs">`. Always include the DOI link:
