@@ -48,6 +48,34 @@
     });
   }
 
+
+  // Dropdown sub-menus: click/Enter toggles, Escape or click outside closes.
+  var toggles = Array.prototype.slice.call(document.querySelectorAll(".sub-toggle"));
+  function closeAll(except) {
+    toggles.forEach(function (b) {
+      if (b === except) return;
+      b.setAttribute("aria-expanded", "false");
+      b.parentNode.classList.remove("is-open");
+    });
+  }
+  toggles.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var open = btn.getAttribute("aria-expanded") !== "true";
+      closeAll(btn);
+      btn.setAttribute("aria-expanded", String(open));
+      btn.parentNode.classList.toggle("is-closed", !open);
+    });
+    btn.parentNode.addEventListener("mouseleave", function () { btn.parentNode.classList.remove("is-closed"); });
+  });
+  document.addEventListener("click", function (e) {
+    if (!e.target.closest || !e.target.closest(".has-sub")) closeAll(null);
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key !== "Escape") return;
+    var openBtn = toggles.filter(function (b) { return b.getAttribute("aria-expanded") === "true"; })[0];
+    if (openBtn) { closeAll(null); openBtn.parentNode.classList.add("is-closed"); openBtn.focus(); }
+  });
+
   // Current year in footer
   var year = document.getElementById("year");
   if (year) year.textContent = new Date().getFullYear();

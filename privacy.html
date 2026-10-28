@@ -27,13 +27,49 @@
       <span class="brand-text">WG EDU<small>Education in Health Informatics</small></span>
     </a>
     <nav id="site-nav" class="site-nav" aria-label="Main">
-      <ul>
+      <ul class="menu">
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="guidelines.html">Guidelines</a></li>
-        <li><a href="programmes.html">Programmes</a></li>
-        <li><a href="activities.html">Activities</a></li>
-        <li><a href="genai-lab.html">GenAI Lab</a></li>
+        <li class="has-sub">
+          <button type="button" class="sub-toggle" aria-expanded="false" aria-controls="sub-about">About</button>
+          <ul class="submenu" id="sub-about">
+            <li><a href="about.html">About the WG</a></li>
+            <li><a href="members.html">Members</a></li>
+            <li><a href="participate.html">How to participate</a></li>
+          </ul>
+        </li>
+        <li class="has-sub">
+          <button type="button" class="sub-toggle" aria-expanded="false" aria-controls="sub-guidelines">Guidelines</button>
+          <ul class="submenu" id="sub-guidelines">
+            <li><a href="guidelines.html">IMIA & EFMI recommendations</a></li>
+            <li><a href="frameworks.html">Competency frameworks</a></li>
+            <li><a href="course-assistant.html">Course design assistant</a></li>
+          </ul>
+        </li>
+        <li class="has-sub">
+          <button type="button" class="sub-toggle" aria-expanded="false" aria-controls="sub-programmes">Programmes</button>
+          <ul class="submenu" id="sub-programmes">
+            <li><a href="programmes.html">Programme database</a></li>
+            <li><a href="accredited.html">Accredited programmes</a></li>
+            <li><a href="national.html">National societies</a></li>
+            <li><a href="open-data.html">Open data</a></li>
+          </ul>
+        </li>
+        <li class="has-sub">
+          <button type="button" class="sub-toggle" aria-expanded="false" aria-controls="sub-activities">Activities</button>
+          <ul class="submenu" id="sub-activities">
+            <li><a href="activities.html">Events</a></li>
+            <li><a href="publications.html">Publications</a></li>
+            <li><a href="projects.html">European projects</a></li>
+            <li><a href="open-knowledge.html">Open knowledge</a></li>
+          </ul>
+        </li>
+        <li class="has-sub">
+          <button type="button" class="sub-toggle" aria-expanded="false" aria-controls="sub-genai-lab">GenAI Lab</button>
+          <ul class="submenu" id="sub-genai-lab">
+            <li><a href="genai-lab.html">Questionnaire</a></li>
+            <li><a href="genai-resources.html">Resources & suggestions</a></li>
+          </ul>
+        </li>
       </ul>
     </nav>
     <button class="icon-btn theme-toggle" type="button" aria-pressed="false" title="Switch light/dark mode">
@@ -63,7 +99,7 @@
     <h2>1. Who is responsible</h2>
     <p>The data controller is the <strong>European Federation for Medical Informatics (EFMI)</strong>, acting through its
       Working Group on Education (WG EDU). <span class="validate">TO VALIDATE: EFMI legal name, registered address and privacy contact e-mail</span></p>
-    <p>For any privacy question, contact the WG EDU chairs (see <a href="about.html#chairs">About</a>) or EFMI at the address above.</p>
+    <p>For any privacy question, contact the WG EDU chairs (see <a href="members.html#chairs">About</a>) or EFMI at the address above.</p>
 
     <h2>2. What happens when you visit the site</h2>
     <p>This website is a set of static pages hosted on <strong>GitHub Pages</strong>, a service of GitHub, Inc. (USA).
@@ -98,8 +134,8 @@
       </table>
     </div>
     <p style="margin-top:1rem"><span class="validate">TO VALIDATE: retention periods</span></p>
-    <p>The forms on the <a href="about.html#participate">About</a>, <a href="programmes.html#add">Programmes</a> and
-      <a href="genai-lab.html#suggest">GenAI Lab</a> pages are embedded from Baserow. When a page with a form loads, your browser
+    <p>The forms on the <a href="participate.html">About</a>, <a href="programmes.html#add">Programmes</a> and
+      <a href="genai-resources.html#suggest">GenAI Lab</a> pages are embedded from Baserow. When a page with a form loads, your browser
       connects directly to Baserow, which receives your IP address. Baserow sets one functional cookie,
       <code>i18n-language</code>, that stores the interface language (for example <code>en</code>) for one year.
       It contains no identifier and is not used for tracking. No data is sent to Baserow until you press “Submit”.

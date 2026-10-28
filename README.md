@@ -36,19 +36,28 @@ git add -A && git commit -m "Describe your change" && git push
 
 ## 2. Where things are
 
-| File | What it contains |
-|---|---|
-| `index.html` | Home: mission, **upcoming events**, "Join the WG" button |
-| `about.html` | History, **Members** (chairs & board incl. honorary chair, national representatives, members, former members) with LinkedIn/ORCID links, How to participate |
-| `guidelines.html` | IMIA recommendations, EFMI guidance, frameworks, "Coming soon" course design assistant |
-| `programmes.html` | Programme database (Baserow), certified courses, national lists, open data |
-| `activities.html` | Past events, **publications**, European projects |
-| `genai-lab.html` | GenAI questionnaire, resources, suggestion form |
-| `open-knowledge.html` | EU open science infrastructures, OER, funding, policy |
-| `privacy.html` | GDPR privacy notice |
-| `accessibility.html` | Accessibility statement (WCAG 2.1 AA) |
-| `404.html` | "Page not found" page |
-| `events/aaaa.mm.dd event/` | **One folder per event**: `index.html` (event page), `photos/`, `documents/` |
+| Menu | Page file | What it contains |
+|---|---|---|
+| Home | `index.html` | Mission, **upcoming events**, "Join the WG" button |
+| About | `about.html` | About the WG and history |
+| | `members.html` | **Members** (chairs & board incl. honorary chair, national representatives, members, former members) with LinkedIn/ORCID |
+| | `participate.html` | How to participate + Baserow membership form |
+| Guidelines | `guidelines.html` | IMIA recommendations and EFMI guidance |
+| | `frameworks.html` | Related competency frameworks |
+| | `course-assistant.html` | "Coming soon" course design assistant (Mistral) |
+| Programmes | `programmes.html` | Programme database (Baserow) + "add a programme" form |
+| | `accredited.html` | EFMI/IMIA accredited programmes, with the EFMI AC2 mark |
+| | `national.html` | EFMI national societies, their **education WGs** and national course lists |
+| | `open-data.html` | Open data, Zenodo, FAIR |
+| Activities | `activities.html` | **Events** timeline (links to `events/…` pages) |
+| | `publications.html` | Publications (with schema.org metadata) |
+| | `projects.html` | European projects |
+| | `open-knowledge.html` | EU open science infrastructures, OER, funding, policy |
+| GenAI Lab | `genai-lab.html` | GenAI questionnaire |
+| | `genai-resources.html` | Resources + Baserow suggestion form |
+| Footer | `privacy.html`, `accessibility.html` | Privacy notice, accessibility statement |
+| – | `404.html` | "Page not found" (uses absolute `/efmi-wg-edu/` paths) |
+| – | `events/aaaa.mm.dd event/` | **One folder per event**: `index.html`, `photos/`, `documents/` |
 | `assets/css/tokens.css` | **All colours** (EFMI palette, light and dark mode) |
 | `assets/css/main.css` | Layout and components |
 | `assets/js/site.js` | Mobile menu and light/dark toggle |
@@ -56,12 +65,14 @@ git add -A && git commit -m "Describe your change" && git push
 | `assets/js/genai-quiz.js` | Questionnaire logic (normally no need to touch) |
 | `assets/img/` | Logos and favicon |
 
-### Header and footer
+### Header, menu and footer
 
-The header (menu) and footer are **copied into every HTML page**, between the comments
-`<!-- ===== HEADER ... -->` and `<!-- ===== FOOTER ... -->`. If you change the menu or footer,
-make the same change in **all** `.html` files. On your computer, use your editor's
-"Find and replace in files".
+The header (menu with sub-menus) and footer are **copied into every HTML page**, between
+`<!-- ===== HEADER ... -->` and `<!-- ===== FOOTER ... -->`. Event pages use the same menu with `../../` in front of each link.
+To add a page to a sub-menu: create the page (copy a page of the same section), then add one
+`<li><a href="new-page.html">Title</a></li>` to the right `<ul class="submenu">` in **all** pages, and add the same link
+to the tabs (`<ul class="subnav">`) of the pages in that section. On your computer, use "Find and replace in files".
+On phones the sub-menus are shown expanded inside the "Menu" button.
 
 ---
 
@@ -82,18 +93,24 @@ block and edit the date, title and text. After the event, move it to `activities
    (spaces become `%20`, e.g. `events/2026.10.29%20EFMI%20STC%202026%20Athens/`).
 
 ### Add profile links to a member
-In `about.html`, each member has `<span class="profile-links">` with LinkedIn and ORCID links. ORCID iDs were matched by
+In `members.html`, each member has `<span class="profile-links">` with LinkedIn and ORCID links. ORCID iDs were matched by
 name and affiliation; ask each member to confirm theirs.
 
+### Add a national society's education group
+In `national.html`, find the country row and replace `<span class="validate">TO VALIDATE</span>` with a link.
+
+### Add an accredited programme
+In `accredited.html`, copy a `<tr>` of the table. Keep the small AC2 mark only for EFMI-accredited programmes.
+
 ### Add a publication
-In `activities.html`, add a `<li>` to the right year inside `<ul class="pubs">`. Always include the DOI link:
+In `publications.html`, add a `<li>` to the right year inside `<ul class="pubs">`. Always include the DOI link:
 ```html
 <li>Author A, Author B. Title. <em>Journal.</em> 2026;1:1-2. <a class="doi" href="https://doi.org/10.xxxx/xxxx">doi:10.xxxx/xxxx</a></li>
 ```
 Optional: add the same publication to the `application/ld+json` block at the end of the page (metadata for search engines).
 
 ### Add or change a member
-In `about.html`, copy a `<li>` inside the right `<ul class="people">` list. **Ask the person for consent before listing them.**
+In `members.html`, copy a `<li>` inside the right `<ul class="people">` list. **Ask the person for consent before listing them.**
 
 ### Edit the GenAI questionnaire
 Open `assets/js/genai-quiz-data.js`. Each scenario is a block `{ id, topic, text, answer, why, instead }`.
@@ -128,11 +145,11 @@ Database **EFMI_EDU_WG** on baserow.io (workspace of Ricardo Correia). Current s
 
 | Page | What | Baserow table → view | State |
 |---|---|---|---|
-| `about.html#participate` | Membership form | Members → *Join form* | **embedded** |
+| `participate.html` | Membership form | Members → *Join form* | **embedded** |
 | `programmes.html#add` | Add a programme | Programmes → *Submit form* | **embedded** |
-| `genai-lab.html#suggest` | Suggest a resource | GenAI Resources → *Suggest form* | **embedded** |
+| `genai-resources.html#suggest` | Suggest a resource | GenAI Resources → *Suggest form* | **embedded** |
 | `programmes.html#database` | Programme database | Programmes → *Public* (grid) | placeholder, view not shared yet |
-| `genai-lab.html#resources` | Approved resources | GenAI Resources → *Public* (gallery) | static cards for now, view not shared yet |
+| `genai-resources.html#resources` | Approved resources | GenAI Resources → *Public* (gallery) | static cards for now, view not shared yet |
 
 The form link (`https://baserow.io/form/…`) stays the same when you edit fields in Baserow, so the site
 does not need to change. If you rename a field that the privacy notice mentions, update `privacy.html`.

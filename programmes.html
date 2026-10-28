@@ -27,13 +27,49 @@
       <span class="brand-text">WG EDU<small>Education in Health Informatics</small></span>
     </a>
     <nav id="site-nav" class="site-nav" aria-label="Main">
-      <ul>
+      <ul class="menu">
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="guidelines.html">Guidelines</a></li>
-        <li><a href="programmes.html" aria-current="page">Programmes</a></li>
-        <li><a href="activities.html">Activities</a></li>
-        <li><a href="genai-lab.html">GenAI Lab</a></li>
+        <li class="has-sub">
+          <button type="button" class="sub-toggle" aria-expanded="false" aria-controls="sub-about">About</button>
+          <ul class="submenu" id="sub-about">
+            <li><a href="about.html">About the WG</a></li>
+            <li><a href="members.html">Members</a></li>
+            <li><a href="participate.html">How to participate</a></li>
+          </ul>
+        </li>
+        <li class="has-sub">
+          <button type="button" class="sub-toggle" aria-expanded="false" aria-controls="sub-guidelines">Guidelines</button>
+          <ul class="submenu" id="sub-guidelines">
+            <li><a href="guidelines.html">IMIA & EFMI recommendations</a></li>
+            <li><a href="frameworks.html">Competency frameworks</a></li>
+            <li><a href="course-assistant.html">Course design assistant</a></li>
+          </ul>
+        </li>
+        <li class="has-sub">
+          <button type="button" class="sub-toggle is-current" aria-expanded="false" aria-controls="sub-programmes">Programmes</button>
+          <ul class="submenu" id="sub-programmes">
+            <li><a href="programmes.html" aria-current="page">Programme database</a></li>
+            <li><a href="accredited.html">Accredited programmes</a></li>
+            <li><a href="national.html">National societies</a></li>
+            <li><a href="open-data.html">Open data</a></li>
+          </ul>
+        </li>
+        <li class="has-sub">
+          <button type="button" class="sub-toggle" aria-expanded="false" aria-controls="sub-activities">Activities</button>
+          <ul class="submenu" id="sub-activities">
+            <li><a href="activities.html">Events</a></li>
+            <li><a href="publications.html">Publications</a></li>
+            <li><a href="projects.html">European projects</a></li>
+            <li><a href="open-knowledge.html">Open knowledge</a></li>
+          </ul>
+        </li>
+        <li class="has-sub">
+          <button type="button" class="sub-toggle" aria-expanded="false" aria-controls="sub-genai-lab">GenAI Lab</button>
+          <ul class="submenu" id="sub-genai-lab">
+            <li><a href="genai-lab.html">Questionnaire</a></li>
+            <li><a href="genai-resources.html">Resources & suggestions</a></li>
+          </ul>
+        </li>
       </ul>
     </nav>
     <button class="icon-btn theme-toggle" type="button" aria-pressed="false" title="Switch light/dark mode">
@@ -55,13 +91,7 @@
     <h1>BMHI education in Europe</h1>
     <p class="lead">An open database of degree programmes and courses in Biomedical and Health Informatics,
       continuing the former WG EDU / AC2 database. Anyone can browse, download and reuse it.</p>
-    <ul class="subnav" aria-label="On this page">
-      <li><a href="#database">Programme database</a></li>
-      <li><a href="#add">Add your programme</a></li>
-      <li><a href="#certified">Certified courses</a></li>
-      <li><a href="#national">National lists</a></li>
-      <li><a href="#open-data">Open data</a></li>
-    </ul>
+    <ul class="subnav" aria-label="Programmes pages"><li><a href="programmes.html" aria-current="page">Programme database</a></li><li><a href="accredited.html">Accredited programmes</a></li><li><a href="national.html">National societies</a></li><li><a href="open-data.html">Open data</a></li></ul>
   </div>
 </section>
 
@@ -91,77 +121,8 @@
   </div>
 </section>
 
-<section class="section" aria-labelledby="certified">
-  <div class="container">
-    <h2 id="certified">Certified and accredited courses</h2>
-    <div class="prose">
-      <p>Programmes that hold, or have held, an accreditation by EFMI or IMIA. EFMI accreditation is granted by the
-        <a href="https://efmi.org/accreditation-and-certification/">EFMI Accreditation and Certification Committee (AC2)</a>
-        after a self-assessment and a site visit, for three years, then a re-accreditation is needed.</p>
-    </div>
-    <div class="table-wrap">
-      <table>
-        <caption class="visually-hidden">Accredited BMHI programmes in Europe</caption>
-        <thead><tr><th scope="col">Programme</th><th scope="col">Institution</th><th scope="col">Country</th><th scope="col">Accreditation</th><th scope="col">Source</th></tr></thead>
-        <tbody>
-          <tr>
-            <td><a href="https://mis.med.up.pt/">Master in Medical Informatics (MIM)</a>, now Master in Health Informatics (MIS)</td>
-            <td>Faculty of Medicine, University of Porto (FMUP)</td>
-            <td>Portugal</td>
-            <td>EFMI, 2022–2025 (3 years) · <span class="validate">TO VALIDATE: re-accreditation after 2025</span></td>
-            <td><a href="https://mis.med.up.pt/en/?p=5502">Programme news</a></td>
-          </tr>
-          <tr>
-            <td>Master's programme in Medical Informatics</td>
-            <td>UMIT TIROL – Private University for Health Sciences and Health Technology</td>
-            <td>Austria</td>
-            <td>EFMI, 2020 – first programme accredited by EFMI · <span class="validate">TO VALIDATE: current status</span></td>
-            <td><a href="https://doi.org/10.3233/SHTI210085">Ammenwerth, Stud Health Technol Inform 2021</a></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <p style="margin-top:1rem">This list is built from public sources and may be incomplete. <span class="validate">TO VALIDATE: full list of EFMI and IMIA accredited programmes from AC2</span>
-      Is your programme accredited? <a href="#add">Tell us</a>.</p>
-  </div>
-</section>
 
-<section class="section" aria-labelledby="national">
-  <div class="container">
-    <h2 id="national">Course lists of national member societies</h2>
-    <p>Several EFMI national societies keep their own lists of courses. <span class="validate">TO VALIDATE: links to be confirmed by each national representative</span></p>
-    <div class="grid">
-      <div class="card"><h3>Germany – GMDS</h3><p>Programmes in medical informatics and the GMDS competence catalogue.</p><p><a href="https://www.gmds.de/">gmds.de</a></p></div>
-      <div class="card"><h3>France – CIDHR</h3><p>Catalogue and Index of Digital Health Teaching Resources (multilingual search engine).</p><p><a href="https://doi.org/10.2196/48393">About CIDHR (JMIR Med Educ 2024)</a></p></div>
-      <div class="card"><h3>Portugal</h3><p>Review of BMHI teaching in Portugal (Costa et al., Heliyon 2023).</p><p><a href="https://doi.org/10.1016/j.heliyon.2023.e14163">Read the study</a></p></div>
-      <div class="card"><h3>Your country</h3><p>National representatives: send us the URL of your society's course list.</p><p><a href="about.html#participate">Contact the WG</a></p></div>
-    </div>
-  </div>
-</section>
 
-<section class="section" aria-labelledby="open-data">
-  <div class="container">
-    <h2 id="open-data">Open data</h2>
-    <div class="grid grid-2">
-      <div class="prose">
-        <p>The database is published as open data under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
-          (catalogue data, no personal data). Every year we deposit a versioned snapshot on
-          <a href="https://zenodo.org/">Zenodo</a> with a DOI, so it can be cited and reused in research.</p>
-        <p>Records follow the <a href="https://www.go-fair.org/fair-principles/">FAIR principles</a>: they use
-          European identifiers (country codes, <a href="https://europa.eu/europass/en/description-eight-eqf-levels">EQF levels</a>, ECTS) and are
-          described with <a href="https://schema.org/EducationalOccupationalProgram">schema.org</a> terms.</p>
-      </div>
-      <div class="card">
-        <h3>Downloads</h3>
-        <ul>
-          <li>CSV export of the public view <span class="validate">TO VALIDATE</span></li>
-          <li>Zenodo community “EFMI WG EDU” <span class="validate">TO VALIDATE</span></li>
-          <li>Data dictionary (field definitions) <span class="validate">TO VALIDATE</span></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
 </main>
 
 <!-- ===== FOOTER (identical on every page) ===== -->

@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GenAI resources – EFMI WG EDU</title>
+<meta name="description" content="Open resources on generative AI in health and informatics education, reviewed by WG EDU members, and a form to suggest new ones.">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/main.css">
+<script>
+  /* Runs before the page is drawn: enables JS styles and applies a saved theme (no flash). */
+  document.documentElement.classList.remove("no-js");
+  try { var t = localStorage.getItem("efmi-wg-edu-theme"); if (t) document.documentElement.setAttribute("data-theme", t); } catch (e) {}
+</script>
+<script src="assets/js/site.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<!-- ===== HEADER (identical on every page; only aria-current changes) ===== -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html">
+      <img src="assets/img/efmi-wg-logo.png" alt="EFMI Working Groups" width="587" height="235">
+      <span class="brand-text">WG EDU<small>Education in Health Informatics</small></span>
+    </a>
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li class="has-sub">
+          <button type="button" class="sub-toggle" aria-expanded="false" aria-controls="sub-about">About</button>
+          <ul class="submenu" id="sub-about">
+            <li><a href="about.html">About the WG</a></li>
+            <li><a href="members.html">Members</a></li>
+            <li><a href="participate.html">How to participate</a></li>
+          </ul>
+        </li>
+        <li class="has-sub">
+          <button type="button" class="sub-toggle" aria-expanded="false" aria-controls="sub-guidelines">Guidelines</button>
+          <ul class="submenu" id="sub-guidelines">
+            <li><a href="guidelines.html">IMIA & EFMI recommendations</a></li>
+            <li><a href="frameworks.html">Competency frameworks</a></li>
+            <li><a href="course-assistant.html">Course design assistant</a></li>
+          </ul>
+        </li>
+        <li class="has-sub">
+          <button type="button" class="sub-toggle" aria-expanded="false" aria-controls="sub-programmes">Programmes</button>
+          <ul class="submenu" id="sub-programmes">
+            <li><a href="programmes.html">Programme database</a></li>
+            <li><a href="accredited.html">Accredited programmes</a></li>
+            <li><a href="national.html">National societies</a></li>
+            <li><a href="open-data.html">Open data</a></li>
+          </ul>
+        </li>
+        <li class="has-sub">
+          <button type="button" class="sub-toggle" aria-expanded="false" aria-controls="sub-activities">Activities</button>
+          <ul class="submenu" id="sub-activities">
+            <li><a href="activities.html">Events</a></li>
+            <li><a href="publications.html">Publications</a></li>
+            <li><a href="projects.html">European projects</a></li>
+            <li><a href="open-knowledge.html">Open knowledge</a></li>
+          </ul>
+        </li>
+        <li class="has-sub">
+          <button type="button" class="sub-toggle is-current" aria-expanded="false" aria-controls="sub-genai-lab">GenAI Lab</button>
+          <ul class="submenu" id="sub-genai-lab">
+            <li><a href="genai-lab.html">Questionnaire</a></li>
+            <li><a href="genai-resources.html" aria-current="page">Resources & suggestions</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <button class="icon-btn theme-toggle" type="button" aria-pressed="false" title="Switch light/dark mode">
+      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      <span class="visually-hidden">Dark mode, currently </span><span class="theme-label">Light</span>
+    </button>
+    <button class="icon-btn nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      <span>Menu</span>
+    </button>
+  </div>
+</header>
+<!-- ===== END HEADER ===== -->
+
+<main id="main" tabindex="-1">
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">GenAI Lab</p>
+    <h1>GenAI resources</h1>
+    <p class="lead">Open resources chosen by the community. Suggest one; a WG member reviews every suggestion.</p>
+    <ul class="subnav" aria-label="GenAI Lab pages"><li><a href="genai-lab.html">Questionnaire</a></li><li><a href="genai-resources.html" aria-current="page">Resources & suggestions</a></li></ul>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="resources">
+  <div class="container">
+    <h2 id="resources">Resources on GenAI in education</h2>
+    <p>Open, reusable resources. Each suggestion from the community is checked by a WG member before it appears here.</p>
+    <div class="grid">
+      <div class="card">
+        <span class="tag">Regulation</span><span class="tag">EU</span>
+        <h3>EU AI Act</h3>
+        <p>The EU regulation on AI. Article 4 requires AI literacy for staff, and Annex III lists education uses as high-risk.</p>
+        <p><a href="https://eur-lex.europa.eu/eli/reg/2024/1689/oj">Regulation (EU) 2024/1689</a></p>
+      </div>
+      <div class="card">
+        <span class="tag">Guidance</span><span class="tag">EU</span>
+        <h3>Ethical guidelines for educators</h3>
+        <p>European Commission guidelines on using AI and data in teaching and learning.</p>
+        <p><a href="https://op.europa.eu/en/publication-detail/-/publication/d81a0d54-5348-11ed-92ed-01aa75ed71a1/language-en">Publications Office of the EU</a></p>
+      </div>
+      <div class="card">
+        <span class="tag">Guidance</span><span class="tag">UNESCO</span>
+        <h3>Guidance for GenAI in education and research</h3>
+        <p>UNESCO's global guidance on policies for generative AI in education.</p>
+        <p><a href="https://www.unesco.org/en/articles/guidance-generative-ai-education-and-research">unesco.org</a></p>
+      </div>
+      <div class="card">
+        <span class="tag">Research</span><span class="tag">BMHI</span>
+        <h3>ChatGPT in medical informatics education</h3>
+        <p>Student perceptions and proposals for integrating ChatGPT into a BMHI course.</p>
+        <p><a href="https://doi.org/10.2196/51151">JMIR Med Educ 2024</a></p>
+      </div>
+      <div class="card">
+        <span class="tag">Assessment</span>
+        <h3>AI Assessment Scale</h3>
+        <p>A five-level scale to tell students how much AI they may use in each assessment task.</p>
+        <p><a href="https://aiassessmentscale.com/">aiassessmentscale.com</a> <span class="validate">TO VALIDATE</span></p>
+      </div>
+      <div class="card">
+        <span class="tag">Data</span><span class="tag">Open source</span>
+        <h3>Synthea – synthetic patients</h3>
+        <p>Generates realistic but fictional patient records for teaching, without privacy risk.</p>
+        <p><a href="https://synthetichealth.github.io/synthea/">synthetichealth.github.io</a></p>
+      </div>
+    </div>
+    <!-- BASEROW: once approved resources live in Baserow, replace the cards above with
+         <iframe class="embed-frame" title="GenAI education resources" src="https://baserow.io/public/gallery/XXXX" loading="lazy"></iframe> -->
+  </div>
+</section>
+
+<section class="section" aria-labelledby="suggest">
+  <div class="container">
+    <h2 id="suggest">Suggest a resource</h2>
+    <div class="grid grid-2">
+      <div class="prose">
+        <p>Know a good open resource on GenAI in health or informatics education? Send it to us.</p>
+        <h3>What happens next</h3>
+        <ol>
+          <li>Your suggestion is stored in our database in the EU (Baserow, Germany).</li>
+          <li>An AI pre-screen checks the link, licence and topic and proposes tags. <span class="validate">TO VALIDATE: model and provider</span></li>
+          <li>A WG member reviews it and decides. <strong>Nothing is published without human approval.</strong></li>
+        </ol>
+      </div>
+      <div><!-- BASEROW form "Suggest a GenAI resource". Edit the form in Baserow; this link stays the same. -->
+        <iframe class="embed-frame embed-form" title="Suggest a GenAI resource" src="https://baserow.io/form/FNC4no8jZDZHJPI5Cap7gVaDjocvkgnDaLlvmAe8shc" loading="lazy" style="min-height:70rem"></iframe>
+        <p class="embed-fallback">Form not showing? <a href="https://baserow.io/form/FNC4no8jZDZHJPI5Cap7gVaDjocvkgnDaLlvmAe8shc">Open the form in a new page</a>. It is hosted by Baserow in the EU; see the <a href="privacy.html">privacy notice</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===== FOOTER (identical on every page) ===== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h2>EFMI WG EDU</h2>
+        <p>Working Group on Education in Biomedical and Health Informatics of the
+          <a href="https://efmi.org/">European Federation for Medical Informatics (EFMI)</a>.</p>
+      </div>
+      <div>
+        <h2>Site</h2>
+        <ul>
+          <li><a href="open-knowledge.html">Open knowledge &amp; EU resources</a></li>
+          <li><a href="privacy.html">Privacy notice</a></li>
+          <li><a href="accessibility.html">Accessibility statement</a></li>
+          <li><a href="https://efmi.org/workinggroups/edu-education/">WG EDU on efmi.org</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Open by default</h2>
+        <p>No cookies, no analytics, no trackers. Content licensed
+          <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">CC BY 4.0</a>;
+          code under the MIT licence. EFMI logo &copy; EFMI and event photos keep their own licences (see each photo).</p>
+      </div>
+    </div>
+    <p class="footer-bottom">&copy; <span id="year">2026</span> EFMI Working Group on Education.
+      <a href="https://github.com/ricardojccorreia/efmi-wg-edu">Source code on GitHub</a>.</p>
+  </div>
+</footer>
+</body>
+</html>
