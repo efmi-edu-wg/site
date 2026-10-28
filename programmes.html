@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Programmes – EFMI WG EDU</title>
+<meta name="description" content="Open database of Biomedical and Health Informatics education programmes in Europe, certified courses and national course lists.">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/main.css">
+<script>
+  /* Runs before the page is drawn: enables JS styles and applies a saved theme (no flash). */
+  document.documentElement.classList.remove("no-js");
+  try { var t = localStorage.getItem("efmi-wg-edu-theme"); if (t) document.documentElement.setAttribute("data-theme", t); } catch (e) {}
+</script>
+<script src="assets/js/site.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<!-- ===== HEADER (identical on every page; only aria-current changes) ===== -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html">
+      <img src="assets/img/efmi-wg-logo.png" alt="EFMI Working Groups" width="587" height="235">
+      <span class="brand-text">WG EDU<small>Education in Health Informatics</small></span>
+    </a>
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="guidelines.html">Guidelines</a></li>
+        <li><a href="programmes.html" aria-current="page">Programmes</a></li>
+        <li><a href="activities.html">Activities</a></li>
+        <li><a href="genai-lab.html">GenAI Lab</a></li>
+      </ul>
+    </nav>
+    <button class="icon-btn theme-toggle" type="button" aria-pressed="false" title="Switch light/dark mode">
+      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      <span class="visually-hidden">Dark mode, currently </span><span class="theme-label">Light</span>
+    </button>
+    <button class="icon-btn nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      <span>Menu</span>
+    </button>
+  </div>
+</header>
+<!-- ===== END HEADER ===== -->
+
+<main id="main" tabindex="-1">
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">Programmes</p>
+    <h1>BMHI education in Europe</h1>
+    <p class="lead">An open database of degree programmes and courses in Biomedical and Health Informatics,
+      continuing the former WG EDU / AC2 database. Anyone can browse, download and reuse it.</p>
+    <ul class="subnav" aria-label="On this page">
+      <li><a href="#database">Programme database</a></li>
+      <li><a href="#add">Add your programme</a></li>
+      <li><a href="#certified">Certified courses</a></li>
+      <li><a href="#national">National lists</a></li>
+      <li><a href="#open-data">Open data</a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="database">
+  <div class="container">
+    <h2 id="database">Programme database</h2>
+    <p>Search and filter by country, level (bachelor, master, doctorate, continuing education), language and delivery mode.</p>
+    <!-- BASEROW: replace this placeholder with the public grid/gallery view:
+         <iframe class="embed-frame" title="Database of BMHI programmes in Europe" src="https://baserow.io/public/grid/XXXX" loading="lazy"></iframe> -->
+    <div class="placeholder" role="note">
+      <strong>Baserow public view will be embedded here</strong>
+      Proposed fields: programme name · institution · country · city · level (EQF) · ECTS · language(s) · delivery mode ·
+      IMIA domains covered · accreditation · URL · last verified.<br>
+      <code>&lt;iframe src="https://baserow.io/public/grid/…"&gt;</code>
+    </div>
+    <p style="margin-top:1rem"><span class="validate">TO VALIDATE</span> Migration of records from the former AC2 database (source file and licence to be confirmed with AC2).</p>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="add">
+  <div class="container">
+    <h2 id="add">Add or update your programme</h2>
+    <p>Programme directors can submit a new programme or a correction. A WG member checks every entry before it is published.</p>
+    <!-- BASEROW: replace with <iframe class="embed-frame" title="Submit a programme" src="https://baserow.io/form/XXXX" loading="lazy"></iframe> -->
+    <div class="placeholder" role="note">
+      <strong>Baserow submission form will be embedded here</strong>
+      Submitted records are reviewed by the WG before they appear in the public view.
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="certified">
+  <div class="container">
+    <h2 id="certified">Certified and accredited courses</h2>
+    <div class="prose">
+      <p>Programmes and courses that hold an EFMI/IMIA accreditation or a recognised certification in BMHI.</p>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <caption class="visually-hidden">Certified and accredited BMHI courses</caption>
+        <thead><tr><th scope="col">Programme / course</th><th scope="col">Institution</th><th scope="col">Country</th><th scope="col">Accreditation</th></tr></thead>
+        <tbody>
+          <tr><td colspan="4"><span class="validate">TO VALIDATE</span> List to be supplied by AC2 / IMIA Accreditation Committee. Will be a filtered view of the database above.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="national">
+  <div class="container">
+    <h2 id="national">Course lists of national member societies</h2>
+    <p>Several EFMI national societies keep their own lists of courses. <span class="validate">TO VALIDATE: links to be confirmed by each national representative</span></p>
+    <div class="grid">
+      <div class="card"><h3>Germany – GMDS</h3><p>Programmes in medical informatics and the GMDS competence catalogue.</p><p><a href="https://www.gmds.de/">gmds.de</a></p></div>
+      <div class="card"><h3>France – CIDHR</h3><p>Catalogue and Index of Digital Health Teaching Resources (multilingual search engine).</p><p><a href="https://doi.org/10.2196/48393">About CIDHR (JMIR Med Educ 2024)</a></p></div>
+      <div class="card"><h3>Portugal</h3><p>Review of BMHI teaching in Portugal (Costa et al., Heliyon 2023).</p><p><a href="https://doi.org/10.1016/j.heliyon.2023.e14163">Read the study</a></p></div>
+      <div class="card"><h3>Your country</h3><p>National representatives: send us the URL of your society's course list.</p><p><a href="about.html#participate">Contact the WG</a></p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="open-data">
+  <div class="container">
+    <h2 id="open-data">Open data</h2>
+    <div class="grid grid-2">
+      <div class="prose">
+        <p>The database is published as open data under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
+          (catalogue data, no personal data). Every year we deposit a versioned snapshot on
+          <a href="https://zenodo.org/">Zenodo</a> with a DOI, so it can be cited and reused in research.</p>
+        <p>Records follow the <a href="https://www.go-fair.org/fair-principles/">FAIR principles</a>: they use
+          European identifiers (country codes, <a href="https://europa.eu/europass/en/description-eight-eqf-levels">EQF levels</a>, ECTS) and are
+          described with <a href="https://schema.org/EducationalOccupationalProgram">schema.org</a> terms.</p>
+      </div>
+      <div class="card">
+        <h3>Downloads</h3>
+        <ul>
+          <li>CSV export of the public view <span class="validate">TO VALIDATE</span></li>
+          <li>Zenodo community “EFMI WG EDU” <span class="validate">TO VALIDATE</span></li>
+          <li>Data dictionary (field definitions) <span class="validate">TO VALIDATE</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ===== FOOTER (identical on every page) ===== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h2>EFMI WG EDU</h2>
+        <p>Working Group on Education in Biomedical and Health Informatics of the
+          <a href="https://efmi.org/">European Federation for Medical Informatics (EFMI)</a>.</p>
+      </div>
+      <div>
+        <h2>Site</h2>
+        <ul>
+          <li><a href="open-knowledge.html">Open knowledge &amp; EU resources</a></li>
+          <li><a href="privacy.html">Privacy notice</a></li>
+          <li><a href="accessibility.html">Accessibility statement</a></li>
+          <li><a href="https://efmi.org/workinggroups/edu-education/">WG EDU on efmi.org</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Open by default</h2>
+        <p>No cookies, no analytics, no trackers. Content licensed
+          <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">CC BY 4.0</a>;
+          code under the MIT licence. EFMI logo &copy; EFMI, not covered by the open licence.</p>
+      </div>
+    </div>
+    <p class="footer-bottom">&copy; <span id="year">2026</span> EFMI Working Group on Education.
+      <a href="https://github.com/efmi-wg-edu/efmi-wg-edu.github.io">Source code on GitHub</a>.</p>
+  </div>
+</footer>
+</body>
+</html>

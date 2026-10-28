@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guidelines – EFMI WG EDU</title>
+<meta name="description" content="IMIA Recommendations on Education in Biomedical and Health Informatics (2nd revision), EFMI guidance and related competency frameworks.">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/main.css">
+<script>
+  /* Runs before the page is drawn: enables JS styles and applies a saved theme (no flash). */
+  document.documentElement.classList.remove("no-js");
+  try { var t = localStorage.getItem("efmi-wg-edu-theme"); if (t) document.documentElement.setAttribute("data-theme", t); } catch (e) {}
+</script>
+<script src="assets/js/site.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<!-- ===== HEADER (identical on every page; only aria-current changes) ===== -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html">
+      <img src="assets/img/efmi-wg-logo.png" alt="EFMI Working Groups" width="587" height="235">
+      <span class="brand-text">WG EDU<small>Education in Health Informatics</small></span>
+    </a>
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="guidelines.html" aria-current="page">Guidelines</a></li>
+        <li><a href="programmes.html">Programmes</a></li>
+        <li><a href="activities.html">Activities</a></li>
+        <li><a href="genai-lab.html">GenAI Lab</a></li>
+      </ul>
+    </nav>
+    <button class="icon-btn theme-toggle" type="button" aria-pressed="false" title="Switch light/dark mode">
+      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      <span class="visually-hidden">Dark mode, currently </span><span class="theme-label">Light</span>
+    </button>
+    <button class="icon-btn nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      <span>Menu</span>
+    </button>
+  </div>
+</header>
+<!-- ===== END HEADER ===== -->
+
+<main id="main" tabindex="-1">
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">Guidelines</p>
+    <h1>Recommendations for BMHI education</h1>
+    <p class="lead">The reference documents we use to design, review and accredit programmes and courses in Biomedical and Health Informatics.</p>
+    <ul class="subnav" aria-label="On this page">
+      <li><a href="#imia">IMIA recommendations</a></li>
+      <li><a href="#efmi">EFMI</a></li>
+      <li><a href="#frameworks">Related frameworks</a></li>
+      <li><a href="#assistant">Course design assistant</a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="imia">
+  <div class="container">
+    <h2 id="imia">IMIA Recommendations – second revision (2023)</h2>
+    <div class="grid grid-2">
+      <div class="prose">
+        <p>The International Medical Informatics Association (IMIA) recommendations describe the knowledge and skills
+          in BMHI that health professionals, health informaticians and IT specialists need. The second revision
+          adds learning outcomes for new topics and is the main reference for accreditation.</p>
+        <p class="btn-row" style="margin-top:0">
+          <a class="btn" href="https://doi.org/10.1016/j.ijmedinf.2022.104908">Read the 2023 recommendations (open access)</a>
+        </p>
+      </div>
+      <div class="card">
+        <h3>How to use them</h3>
+        <ul>
+          <li>Map your course learning outcomes to the recommended domains.</li>
+          <li>Pick the right depth for each audience (users, BMHI specialists, IT specialists).</li>
+          <li>Use the mapping as evidence for accreditation.</li>
+        </ul>
+        <p><span class="validate">TO VALIDATE</span> A ready-to-use mapping template (spreadsheet, CC BY) will be published on Zenodo.</p>
+      </div>
+    </div>
+
+    <h3>All editions</h3>
+    <ol class="pubs" reversed>
+      <li>Bichel-Findlay J, Koch S, Mantas J, et al. Recommendations of the International Medical Informatics Association (IMIA)
+        on Education in Biomedical and Health Informatics: Second Revision. <em>Int J Med Inform.</em> 2023;170:104908.
+        <a class="doi" href="https://doi.org/10.1016/j.ijmedinf.2022.104908">doi:10.1016/j.ijmedinf.2022.104908</a></li>
+      <li>Mantas J, Ammenwerth E, Demiris G, et al. Recommendations of the International Medical Informatics Association (IMIA)
+        on Education in Biomedical and Health Informatics. First Revision. <em>Methods Inf Med.</em> 2010;49(2):105-120.
+        <a class="doi" href="https://pubmed.ncbi.nlm.nih.gov/20054502/">PMID 20054502</a></li>
+      <li>Recommendations of the International Medical Informatics Association (IMIA) on education in health and medical
+        informatics. <em>Methods Inf Med.</em> 2000;39(3):267-77. <a class="doi" href="https://pubmed.ncbi.nlm.nih.gov/10992757/">PMID 10992757</a></li>
+    </ol>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="efmi">
+  <div class="container">
+    <h2 id="efmi">EFMI guidance</h2>
+    <div class="prose">
+      <p>EFMI supports the IMIA recommendations and, through its Accreditation and Certification committee (AC2),
+        promotes the accreditation of BMHI programmes and the certification of knowledge and skills in Europe.</p>
+      <p><span class="validate">TO VALIDATE</span> List of EFMI position papers, accreditation criteria and AC2 documents to be supplied by the chairs.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="frameworks">
+  <div class="container">
+    <h2 id="frameworks">Related competency frameworks</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>TIGER competencies</h3>
+        <p>Health informatics core competencies for nurses and other professions, revised in 2026.</p>
+        <p><a href="https://doi.org/10.1055/a-2927-7621">Hübner et al., Methods Inf Med 2026</a></p>
+      </div>
+      <div class="card">
+        <h3>GMDS competence catalogue</h3>
+        <p>Learning objectives for bachelor programmes in (bio-)medical informatics and health information management (Germany).</p>
+        <p><a href="https://doi.org/10.3205/mibe000276">Bott et al., GMS MIBE 2025</a></p>
+      </div>
+      <div class="card">
+        <h3>European skills taxonomies</h3>
+        <p>Describe course outcomes with <a href="https://esco.ec.europa.eu/">ESCO</a> skills and the
+          <a href="https://joint-research-centre.ec.europa.eu/digcomp_en">DigComp</a> framework so they are comparable across countries.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="assistant">
+  <div class="container">
+    <h2 id="assistant">Course design assistant</h2>
+    <div class="placeholder" role="note">
+      <strong>Coming soon</strong>
+      An AI assistant to help you design a course or curricular unit aligned with the IMIA recommendations:
+      learning outcomes, content, teaching methods and assessment.<br>
+      It will run on a European model (Mistral) and will not use your conversations for training.
+      <span class="validate">TO VALIDATE</span>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ===== FOOTER (identical on every page) ===== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h2>EFMI WG EDU</h2>
+        <p>Working Group on Education in Biomedical and Health Informatics of the
+          <a href="https://efmi.org/">European Federation for Medical Informatics (EFMI)</a>.</p>
+      </div>
+      <div>
+        <h2>Site</h2>
+        <ul>
+          <li><a href="open-knowledge.html">Open knowledge &amp; EU resources</a></li>
+          <li><a href="privacy.html">Privacy notice</a></li>
+          <li><a href="accessibility.html">Accessibility statement</a></li>
+          <li><a href="https://efmi.org/workinggroups/edu-education/">WG EDU on efmi.org</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Open by default</h2>
+        <p>No cookies, no analytics, no trackers. Content licensed
+          <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">CC BY 4.0</a>;
+          code under the MIT licence. EFMI logo &copy; EFMI, not covered by the open licence.</p>
+      </div>
+    </div>
+    <p class="footer-bottom">&copy; <span id="year">2026</span> EFMI Working Group on Education.
+      <a href="https://github.com/efmi-wg-edu/efmi-wg-edu.github.io">Source code on GitHub</a>.</p>
+  </div>
+</footer>
+</body>
+</html>

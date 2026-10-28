@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Accessibility statement – EFMI WG EDU</title>
+<meta name="description" content="Accessibility statement of the EFMI WG EDU website, which aims to conform to WCAG 2.1 level AA.">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/main.css">
+<script>
+  /* Runs before the page is drawn: enables JS styles and applies a saved theme (no flash). */
+  document.documentElement.classList.remove("no-js");
+  try { var t = localStorage.getItem("efmi-wg-edu-theme"); if (t) document.documentElement.setAttribute("data-theme", t); } catch (e) {}
+</script>
+<script src="assets/js/site.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<!-- ===== HEADER (identical on every page; only aria-current changes) ===== -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html">
+      <img src="assets/img/efmi-wg-logo.png" alt="EFMI Working Groups" width="587" height="235">
+      <span class="brand-text">WG EDU<small>Education in Health Informatics</small></span>
+    </a>
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="guidelines.html">Guidelines</a></li>
+        <li><a href="programmes.html">Programmes</a></li>
+        <li><a href="activities.html">Activities</a></li>
+        <li><a href="genai-lab.html">GenAI Lab</a></li>
+      </ul>
+    </nav>
+    <button class="icon-btn theme-toggle" type="button" aria-pressed="false" title="Switch light/dark mode">
+      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      <span class="visually-hidden">Dark mode, currently </span><span class="theme-label">Light</span>
+    </button>
+    <button class="icon-btn nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      <span>Menu</span>
+    </button>
+  </div>
+</header>
+<!-- ===== END HEADER ===== -->
+
+<main id="main" tabindex="-1">
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">Accessibility</p>
+    <h1>Accessibility statement</h1>
+    <p class="lead">We want everyone to be able to use this site. It aims to conform to the
+      <a href="https://www.w3.org/TR/WCAG21/">Web Content Accessibility Guidelines (WCAG) 2.1, level AA</a>.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container prose">
+    <h2>What we do</h2>
+    <ul>
+      <li>Text and interface colours meet a contrast ratio of at least 4.5:1, in both light and dark mode.</li>
+      <li>Every page can be used with a keyboard only, has a visible focus indicator and a “Skip to main content” link.</li>
+      <li>Pages use headings, landmarks and labelled forms so that screen readers can navigate them.</li>
+      <li>Text can be enlarged to 200% and the layout adapts to small screens without horizontal scrolling.</li>
+      <li>Animations are switched off if your system asks for reduced motion.</li>
+      <li>The site works without JavaScript, except for the interactive questionnaire.</li>
+    </ul>
+
+    <h2>Known limitations</h2>
+    <ul>
+      <li>Embedded Baserow views and forms are provided by a third party; their accessibility is outside our control. Data from the
+        programme database will also be available as a downloadable CSV file.</li>
+      <li>Some linked publications are PDF documents from publishers and may not be fully accessible.</li>
+    </ul>
+
+    <h2>Feedback</h2>
+    <p>If something is hard to use, please tell the WG chairs (see <a href="about.html#chairs">About</a>) and we will try to fix it
+      or provide the information in another format.</p>
+    <p class="meta">Statement prepared on <time datetime="2026-10-28">28 October 2026</time> by self-assessment.</p>
+  </div>
+</section>
+</main>
+
+<!-- ===== FOOTER (identical on every page) ===== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h2>EFMI WG EDU</h2>
+        <p>Working Group on Education in Biomedical and Health Informatics of the
+          <a href="https://efmi.org/">European Federation for Medical Informatics (EFMI)</a>.</p>
+      </div>
+      <div>
+        <h2>Site</h2>
+        <ul>
+          <li><a href="open-knowledge.html">Open knowledge &amp; EU resources</a></li>
+          <li><a href="privacy.html">Privacy notice</a></li>
+          <li><a href="accessibility.html">Accessibility statement</a></li>
+          <li><a href="https://efmi.org/workinggroups/edu-education/">WG EDU on efmi.org</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Open by default</h2>
+        <p>No cookies, no analytics, no trackers. Content licensed
+          <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">CC BY 4.0</a>;
+          code under the MIT licence. EFMI logo &copy; EFMI, not covered by the open licence.</p>
+      </div>
+    </div>
+    <p class="footer-bottom">&copy; <span id="year">2026</span> EFMI Working Group on Education.
+      <a href="https://github.com/efmi-wg-edu/efmi-wg-edu.github.io">Source code on GitHub</a>.</p>
+  </div>
+</footer>
+</body>
+</html>

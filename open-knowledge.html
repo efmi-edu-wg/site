@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Open knowledge & EU resources – EFMI WG EDU</title>
+<meta name="description" content="European open science infrastructures, open data and funding programmes that the EFMI WG EDU uses and recommends for digital health education.">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/main.css">
+<script>
+  /* Runs before the page is drawn: enables JS styles and applies a saved theme (no flash). */
+  document.documentElement.classList.remove("no-js");
+  try { var t = localStorage.getItem("efmi-wg-edu-theme"); if (t) document.documentElement.setAttribute("data-theme", t); } catch (e) {}
+</script>
+<script src="assets/js/site.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<!-- ===== HEADER (identical on every page; only aria-current changes) ===== -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html">
+      <img src="assets/img/efmi-wg-logo.png" alt="EFMI Working Groups" width="587" height="235">
+      <span class="brand-text">WG EDU<small>Education in Health Informatics</small></span>
+    </a>
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="guidelines.html">Guidelines</a></li>
+        <li><a href="programmes.html">Programmes</a></li>
+        <li><a href="activities.html">Activities</a></li>
+        <li><a href="genai-lab.html">GenAI Lab</a></li>
+      </ul>
+    </nav>
+    <button class="icon-btn theme-toggle" type="button" aria-pressed="false" title="Switch light/dark mode">
+      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      <span class="visually-hidden">Dark mode, currently </span><span class="theme-label">Light</span>
+    </button>
+    <button class="icon-btn nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      <span>Menu</span>
+    </button>
+  </div>
+</header>
+<!-- ===== END HEADER ===== -->
+
+<main id="main" tabindex="-1">
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">Open knowledge</p>
+    <h1>Open knowledge &amp; EU resources</h1>
+    <p class="lead">We publish our work openly and build on European infrastructures for open science, open data and
+      open education. Here is what we use, and how you can use it too.</p>
+    <ul class="subnav" aria-label="On this page">
+      <li><a href="#our-policy">Our open policy</a></li>
+      <li><a href="#infrastructures">Infrastructures</a></li>
+      <li><a href="#oer">Open educational resources</a></li>
+      <li><a href="#funding">Funding</a></li>
+      <li><a href="#policy">EU policy</a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="our-policy">
+  <div class="container">
+    <h2 id="our-policy">Our open policy</h2>
+    <div class="grid">
+      <div class="card"><h3>Open content</h3><p>All text on this site is licensed <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Reuse it with attribution.</p></div>
+      <div class="card"><h3>Open code</h3><p>The site's code is MIT-licensed and <a href="https://github.com/efmi-wg-edu/efmi-wg-edu.github.io">public on GitHub</a>. Copy it for your own working group.</p></div>
+      <div class="card"><h3>Open data</h3><p>The <a href="programmes.html#open-data">programme database</a> is downloadable and deposited yearly on Zenodo with a DOI.</p></div>
+      <div class="card"><h3>FAIR metadata</h3><p>Pages carry schema.org metadata; publications link to DOIs, and we encourage ORCID iDs for all members.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="infrastructures">
+  <div class="container">
+    <h2 id="infrastructures">Open science infrastructures</h2>
+    <div class="table-wrap">
+      <table>
+        <caption class="visually-hidden">European open science infrastructures and how WG EDU uses them</caption>
+        <thead><tr><th scope="col">Infrastructure</th><th scope="col">What it is</th><th scope="col">How the WG uses it</th></tr></thead>
+        <tbody>
+          <tr><td><a href="https://zenodo.org/">Zenodo</a></td><td>Free repository run by CERN and funded by the EU (OpenAIRE). Gives every deposit a DOI.</td><td>Yearly snapshots of the programme database, slides, course templates, accepted manuscripts.</td></tr>
+          <tr><td><a href="https://www.openaire.eu/">OpenAIRE</a></td><td>EU network that links publications, data, software and projects. <a href="https://explore.openaire.eu/">OpenAIRE Explore</a> searches all of them.</td><td>Finding open outputs of EU education projects; making our outputs visible.</td></tr>
+          <tr><td><a href="https://eosc.eu/">EOSC</a></td><td>European Open Science Cloud: a federation of research data and services.</td><td>Discovering datasets and services for teaching with real-world data.</td></tr>
+          <tr><td><a href="https://orcid.org/">ORCID</a></td><td>Persistent identifier for researchers.</td><td>Linking members to their publications in the member list.</td></tr>
+          <tr><td><a href="https://open-research-europe.ec.europa.eu/">Open Research Europe</a></td><td>The European Commission's open access publishing platform for Horizon Europe results.</td><td>Publishing results of funded projects at no cost to authors.</td></tr>
+          <tr><td><a href="https://data.europa.eu/">data.europa.eu</a></td><td>The official portal for European open data.</td><td>Open datasets for student exercises (health, population, digital skills).</td></tr>
+          <tr><td><a href="https://europepmc.org/">Europe PMC</a></td><td>Open biomedical literature database, part of the European life-science infrastructure.</td><td>Reading lists and literature search exercises.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="oer">
+  <div class="container">
+    <h2 id="oer">Open educational resources</h2>
+    <div class="grid">
+      <div class="card"><h3>DOAB &amp; DOAJ</h3><p>Directories of open access books and journals, many on health informatics.</p><p><a href="https://www.doabooks.org/">doabooks.org</a> · <a href="https://doaj.org/">doaj.org</a></p></div>
+      <div class="card"><h3>CIDHR</h3><p>Catalogue and index of digital health teaching resources, with a multilingual ontology.</p><p><a href="https://doi.org/10.2196/48393">About CIDHR</a></p></div>
+      <div class="card"><h3>Synthetic data</h3><p>Fictional patient records for safe hands-on teaching, e.g. Synthea.</p><p><a href="https://synthetichealth.github.io/synthea/">Synthea</a></p></div>
+      <div class="card"><h3>Health data standards</h3><p>Openly available specifications to teach interoperability: HL7 FHIR, openEHR, SNOMED CT (licence via member countries).</p><p><a href="https://hl7.org/fhir/">hl7.org/fhir</a> · <a href="https://openehr.org/">openehr.org</a></p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="funding">
+  <div class="container">
+    <h2 id="funding">EU funding for digital health education</h2>
+    <p>Programmes that fund education, training and open resources in digital health. Check the
+      <a href="https://ec.europa.eu/info/funding-tenders/opportunities/portal/">EU Funding &amp; Tenders Portal</a> for open calls. <span class="validate">TO VALIDATE: current calls</span></p>
+    <div class="grid">
+      <div class="card"><h3>Erasmus+</h3><p>Cooperation partnerships, Erasmus Mundus joint master's degrees, blended intensive programmes (short summer schools) and staff mobility.</p><p><a href="https://erasmus-plus.ec.europa.eu/">erasmus-plus.ec.europa.eu</a></p></div>
+      <div class="card"><h3>Digital Europe Programme</h3><p>Funds advanced digital skills, including master's programmes and short courses in AI, data and cybersecurity.</p><p><a href="https://digital-strategy.ec.europa.eu/en/activities/digital-programme">Digital Europe</a></p></div>
+      <div class="card"><h3>EU4Health</h3><p>Funds training of the health workforce in digital skills, linked to the European Health Data Space.</p><p><a href="https://health.ec.europa.eu/funding/eu4health-programme-2021-2027-vision-healthier-european-union_en">EU4Health</a></p></div>
+      <div class="card"><h3>Horizon Europe</h3><p>Research and innovation. Open access to publications is mandatory, so results become open knowledge.</p><p><a href="https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe_en">Horizon Europe</a></p></div>
+      <div class="card"><h3>COST Actions</h3><p>Networking funding for researchers across Europe: meetings, training schools and short-term scientific missions.</p><p><a href="https://www.cost.eu/">cost.eu</a></p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="policy">
+  <div class="container">
+    <h2 id="policy">EU policies that shape BMHI education</h2>
+    <div class="grid">
+      <div class="card"><h3>European Health Data Space</h3><p>The EHDS regulation creates rights to access health data and rules for secondary use, so health professionals need new data skills.</p><p><a href="https://health.ec.europa.eu/ehealth-digital-health-and-care/european-health-data-space-regulation-ehds_en">EHDS</a></p></div>
+      <div class="card"><h3>AI Act – AI literacy</h3><p>Organisations using AI must make sure their staff have sufficient AI literacy (Article 4).</p><p><a href="genai-lab.html">GenAI Lab</a></p></div>
+      <div class="card"><h3>Micro-credentials &amp; European Digital Credentials</h3><p>A European approach to small, stackable courses with digitally signed certificates.</p><p><a href="https://europass.europa.eu/en/european-digital-credentials">European Digital Credentials</a></p></div>
+      <div class="card"><h3>Digital Education Action Plan</h3><p>The EU plan for high-quality, inclusive digital education and digital skills.</p><p><a href="https://education.ec.europa.eu/focus-topics/digital-education/action-plan">education.ec.europa.eu</a></p></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ===== FOOTER (identical on every page) ===== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h2>EFMI WG EDU</h2>
+        <p>Working Group on Education in Biomedical and Health Informatics of the
+          <a href="https://efmi.org/">European Federation for Medical Informatics (EFMI)</a>.</p>
+      </div>
+      <div>
+        <h2>Site</h2>
+        <ul>
+          <li><a href="open-knowledge.html">Open knowledge &amp; EU resources</a></li>
+          <li><a href="privacy.html">Privacy notice</a></li>
+          <li><a href="accessibility.html">Accessibility statement</a></li>
+          <li><a href="https://efmi.org/workinggroups/edu-education/">WG EDU on efmi.org</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Open by default</h2>
+        <p>No cookies, no analytics, no trackers. Content licensed
+          <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">CC BY 4.0</a>;
+          code under the MIT licence. EFMI logo &copy; EFMI, not covered by the open licence.</p>
+      </div>
+    </div>
+    <p class="footer-bottom">&copy; <span id="year">2026</span> EFMI Working Group on Education.
+      <a href="https://github.com/efmi-wg-edu/efmi-wg-edu.github.io">Source code on GitHub</a>.</p>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,115 @@
+/* =====================================================================
+   EFMI WG EDU – design tokens
+   ---------------------------------------------------------------------
+   Colours taken from efmi.org (October 2026):
+   - #495762  "EFMI slate"  – main text/heading colour of the efmi.org
+                               WordPress theme (Cerauno), most used colour
+   - #1c70be  "EFMI blue"   – link/button blue used on efmi.org
+   - #2a9fd8  "EFMI cyan"   – the light blue of the two drops in the logo
+   - #636466  "EFMI grey"   – grey of the "EFMI" word mark in the logo
+   - #eeeeee  "EFMI mist"   – borders / light surfaces on efmi.org
+   Fonts on efmi.org: Montserrat (headings) and Karla (text). We do NOT
+   load them from Google (privacy); they are used only if installed,
+   otherwise the system font is used.
+
+   To change a colour, change it here only. Every other file uses the
+   variables below. Check contrast (WCAG AA = 4.5:1 for text) at
+   https://webaim.org/resources/contrastchecker/
+   ===================================================================== */
+
+:root {
+  /* Brand palette (fixed) */
+  --efmi-slate: #495762;
+  --efmi-blue: #1c70be;
+  --efmi-blue-dark: #155a99;
+  --efmi-cyan: #2a9fd8;
+  --efmi-grey: #636466;
+  --efmi-mist: #eeeeee;
+
+  /* Semantic tokens – light mode (default) */
+  --color-bg: #ffffff;
+  --color-surface: #f6f8fa;
+  --color-surface-2: #eaf3fb;
+  --color-border: #d5dde3;
+  --color-text: #26323b;
+  --color-text-muted: #495762;      /* 7.6:1 on white */
+  --color-heading: #2f3b45;
+  --color-link: #1c70be;            /* 5.0:1 on white */
+  --color-link-hover: #155a99;
+  --color-primary: #1c70be;
+  --color-primary-text: #ffffff;
+  --color-accent: #2a9fd8;          /* decorative only, not for text */
+  --color-focus: #e8740c;
+  --color-validate-bg: #fff4d6;
+  --color-validate-text: #6b4a00;
+  --color-good: #1d6b3a;
+  --color-warn: #8a5300;
+  --color-bad: #a3262b;
+  --color-good-bg: #e5f4ea;
+  --color-warn-bg: #fdf1dc;
+  --color-bad-bg: #fbe7e8;
+
+  --font-heading: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-body: "Karla", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  --radius: 10px;
+  --shadow: 0 1px 2px rgb(0 0 0 / 0.06), 0 4px 14px rgb(0 0 0 / 0.06);
+  --max-width: 72rem;
+  --gutter: clamp(1rem, 3vw, 2rem);
+
+  color-scheme: light;
+}
+
+/* Dark mode: follows the operating system unless the visitor chose
+   "light" with the toggle (stored as data-theme on <html>). */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --color-bg: #10161c;
+    --color-surface: #18212a;
+    --color-surface-2: #1b2c3b;
+    --color-border: #2e3c48;
+    --color-text: #e3e9ee;
+    --color-text-muted: #b3c0ca;
+    --color-heading: #f1f5f8;
+    --color-link: #7cc2f2;
+    --color-link-hover: #a9d8f8;
+    --color-primary: #3f97e0;
+    --color-primary-text: #0b1218;
+    --color-focus: #ffb066;
+    --color-validate-bg: #3a2f10;
+    --color-validate-text: #ffe1a1;
+    --color-good: #8fdcaa;
+    --color-warn: #ffcc80;
+    --color-bad: #ffadb0;
+    --color-good-bg: #15301f;
+    --color-warn-bg: #36280f;
+    --color-bad-bg: #3a1a1c;
+    --shadow: 0 1px 2px rgb(0 0 0 / 0.4);
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme="dark"] {
+  --color-bg: #10161c;
+  --color-surface: #18212a;
+  --color-surface-2: #1b2c3b;
+  --color-border: #2e3c48;
+  --color-text: #e3e9ee;
+  --color-text-muted: #b3c0ca;
+  --color-heading: #f1f5f8;
+  --color-link: #7cc2f2;
+  --color-link-hover: #a9d8f8;
+  --color-primary: #3f97e0;
+  --color-primary-text: #0b1218;
+  --color-focus: #ffb066;
+  --color-validate-bg: #3a2f10;
+  --color-validate-text: #ffe1a1;
+  --color-good: #8fdcaa;
+  --color-warn: #ffcc80;
+  --color-bad: #ffadb0;
+  --color-good-bg: #15301f;
+  --color-warn-bg: #36280f;
+  --color-bad-bg: #3a1a1c;
+  --shadow: 0 1px 2px rgb(0 0 0 / 0.4);
+  color-scheme: dark;
+}
