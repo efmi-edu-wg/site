@@ -3,7 +3,7 @@
 Website of the **EFMI Working Group on Education in Biomedical and Health Informatics**
 (<https://efmi.org/workinggroups/edu-education/>).
 
-- **Live site:** <https://efmi-wg-edu.github.io/>
+- **Live site:** <https://ricardojccorreia.github.io/efmi-wg-edu/>
 - **Stack:** plain HTML, CSS and JavaScript. No framework, no build step, no dependencies.
 - **Hosting:** GitHub Pages, published automatically from the `main` branch.
 - **Databases and forms:** Baserow (EU cloud), embedded with `<iframe>`.
@@ -25,8 +25,8 @@ Website of the **EFMI Working Group on Education in Biomedical and Health Inform
 ### Option B – on your computer
 
 ```bash
-git clone https://github.com/efmi-wg-edu/efmi-wg-edu.github.io.git
-cd efmi-wg-edu.github.io
+git clone https://github.com/ricardojccorreia/efmi-wg-edu.git
+cd efmi-wg-edu
 python3 -m http.server 8000      # then open http://localhost:8000
 # edit files, then:
 git add -A && git commit -m "Describe your change" && git push
