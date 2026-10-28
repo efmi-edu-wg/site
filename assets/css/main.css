@@ -111,6 +111,12 @@ a:hover { color: var(--color-link-hover); }
   .site-nav a { padding: 0.75rem; }
   .brand-text small { display: none; }
 }
+@media (max-width: 26rem) {
+  .header-inner { gap: 0.5rem; }
+  .brand { gap: 0.5rem; min-width: 0; }
+  .brand img { height: 2.1rem; }
+  .theme-toggle .theme-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+}
 /* Without JavaScript the menu is always shown */
 .no-js .site-nav { display: block; position: static; box-shadow: none; border: 0; }
 .no-js .nav-toggle, .no-js .theme-toggle { display: none; }
