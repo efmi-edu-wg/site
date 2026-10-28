@@ -289,3 +289,5 @@ details[open] summary { margin-bottom: 0.6rem; }
 .people .profile-links { display: block; margin-top: 0.35rem; font-size: 0.9rem; font-weight: 600; }
 .container.prose { max-width: var(--max-width); }
 .container.prose > * { max-width: 48rem; }
+.embed-form { display: block; }
+.embed-fallback { font-size: 0.9rem; color: var(--color-text-muted); margin-top: 0.5rem; }

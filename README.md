@@ -124,13 +124,18 @@ placeholder box. To connect it:
    The `title` is required for accessibility.
 4. Update `privacy.html` (section 4) if the data collected changes.
 
-| Page | Placeholder | Baserow object |
-|---|---|---|
-| `about.html#participate` | Membership request form | Form |
-| `programmes.html#database` | Programme database | Public grid view (only approved rows) |
-| `programmes.html#add` | Add a programme | Form (new rows hidden until approved) |
-| `genai-lab.html#resources` | Approved resources | Public gallery view (optional) |
-| `genai-lab.html#suggest` | Suggest a resource | Form |
+Database **EFMI_EDU_WG** on baserow.io (workspace of Ricardo Correia). Current state:
+
+| Page | What | Baserow table → view | State |
+|---|---|---|---|
+| `about.html#participate` | Membership form | Members → *Join form* | **embedded** |
+| `programmes.html#add` | Add a programme | Programmes → *Submit form* | **embedded** |
+| `genai-lab.html#suggest` | Suggest a resource | GenAI Resources → *Suggest form* | **embedded** |
+| `programmes.html#database` | Programme database | Programmes → *Public* (grid) | placeholder, view not shared yet |
+| `genai-lab.html#resources` | Approved resources | GenAI Resources → *Public* (gallery) | static cards for now, view not shared yet |
+
+The form link (`https://baserow.io/form/…`) stays the same when you edit fields in Baserow, so the site
+does not need to change. If you rename a field that the privacy notice mentions, update `privacy.html`.
 
 Tip: use a "status" field (`submitted` / `approved`) and filter public views to `approved`, so nothing appears without human review.
 
