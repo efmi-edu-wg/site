@@ -361,3 +361,7 @@ details[open] summary { margin-bottom: 0.6rem; }
 /* Guidelines: mapping template download */
 .template-card { margin-top: 1.5rem; border-left: 6px solid var(--color-primary); }
 .template-card > p:first-of-type { max-width: 52rem; }
+
+/* Education groups worldwide */
+.tag-good { background: var(--color-good-bg); color: var(--color-good); border-color: transparent; }
+.note { color: var(--color-text-muted); font-size: 0.92rem; margin-top: 1.25rem; max-width: 52rem; }

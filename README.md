@@ -41,6 +41,7 @@ git add -A && git commit -m "Describe your change" && git push
 | Home | `index.html` | **Highlight** (next activity / news), mission, **upcoming events**, "Join the WG" button |
 | About | `about.html` | About the WG and history |
 | | `members.html` | **Members** (chairs & board incl. honorary chair, national representatives, members, former members) with LinkedIn/ORCID |
+| | `education-groups.html` | **Education groups worldwide**: IMIA WG05 and the education groups of the IMIA regions (AMIA, HELINA…) |
 | | `participate.html` | How to participate + Baserow membership form |
 | Guidelines | `guidelines.html` | IMIA recommendations and EFMI guidance |
 | | | IMIA **mapping template** download: `assets/templates/imia-mapping-template.xlsx` + `.csv` |
