@@ -357,3 +357,7 @@ details[open] summary { margin-bottom: 0.6rem; }
   letter-spacing: 0.06em; text-transform: uppercase;
 }
 .highlight.is-expired { display: none; }
+
+/* Guidelines: mapping template download */
+.template-card { margin-top: 1.5rem; border-left: 6px solid var(--color-primary); }
+.template-card > p:first-of-type { max-width: 52rem; }

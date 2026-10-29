@@ -43,6 +43,7 @@ git add -A && git commit -m "Describe your change" && git push
 | | `members.html` | **Members** (chairs & board incl. honorary chair, national representatives, members, former members) with LinkedIn/ORCID |
 | | `participate.html` | How to participate + Baserow membership form |
 | Guidelines | `guidelines.html` | IMIA recommendations and EFMI guidance |
+| | | IMIA **mapping template** download: `assets/templates/imia-mapping-template.xlsx` + `.csv` |
 | | `frameworks.html` | Related competency frameworks |
 | | `course-assistant.html` | "Coming soon" course design assistant (Mistral) |
 | Programmes | `programmes.html` | Programme database (Baserow) + "add a programme" form |
@@ -107,6 +108,13 @@ In `national.html`, find the country row and replace `<span class="validate">TO 
 
 ### Add an accredited programme
 In `accredited.html`, copy a `<tr>` of the table. Keep the small AC2 mark only for EFMI-accredited programmes.
+
+### Update the IMIA mapping template
+The spreadsheet in `assets/templates/` is a download linked from `guidelines.html#mapping-template`. Edit it in Excel or
+LibreOffice and keep the sheet names (`Instructions`, `Programme`, `Mapping`, `Coverage`; `Lists` is hidden and feeds the
+drop-downs). Raise the version number on the Instructions sheet and on the Guidelines page, and update the CSV (headers
+and example rows of `Mapping`). Do not paste the IMIA knowledge/skill tables into it: the paper is not openly licensed,
+so the template refers to items by number.
 
 ### Add a publication
 In `publications.html`, add a `<li>` to the right year inside `<ul class="pubs">`. Always include the DOI link:
