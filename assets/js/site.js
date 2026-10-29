@@ -76,6 +76,14 @@
     if (openBtn) { closeAll(null); openBtn.parentNode.classList.add("is-closed"); openBtn.focus(); }
   });
 
+  // Home highlights: hide items after their data-until day, and the section when none is left.
+  var today = new Date().toISOString().slice(0, 10);
+  Array.prototype.forEach.call(document.querySelectorAll(".highlight[data-until]"), function (el) {
+    if (el.getAttribute("data-until") < today) el.classList.add("is-expired");
+  });
+  var hl = document.querySelector(".highlights");
+  if (hl && !hl.querySelector(".highlight:not(.is-expired)")) hl.hidden = true;
+
   // Current year in footer
   var year = document.getElementById("year");
   if (year) year.textContent = new Date().getFullYear();

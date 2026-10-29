@@ -336,3 +336,24 @@ details[open] summary { margin-bottom: 0.6rem; }
 @media (max-width: 70rem) {
   .site-nav.is-open { max-height: calc(100vh - 4.5rem); max-height: calc(100dvh - 4.5rem); overflow-y: auto; overscroll-behavior: contain; }
 }
+
+/* ---------- Home highlights (next activity / news) ---------- */
+.highlights { padding-bottom: 0; }
+.highlights + .section { border-top: 0; }
+.highlight {
+  background: var(--color-surface-2); border: 1px solid var(--color-border);
+  border-left: 6px solid var(--color-primary); border-radius: var(--radius);
+  padding: 1.35rem 1.5rem;
+}
+.highlight + .highlight { margin-top: 1rem; }
+.highlight h3 { margin: 0.25rem 0 0.5rem; font-size: clamp(1.2rem, 2.6vw, 1.5rem); }
+.highlight .meta { color: var(--color-text-muted); font-size: 0.95rem; }
+.highlight > p:not(.meta):not(.highlight-label) { max-width: 52rem; }
+.highlight .btn-row { margin-top: 1rem; }
+.highlight-label {
+  display: inline-block; margin: 0; padding: 0.15rem 0.7rem; border-radius: 999px;
+  background: var(--color-primary); color: var(--color-primary-text);
+  font-family: var(--font-heading); font-weight: 700; font-size: 0.8rem;
+  letter-spacing: 0.06em; text-transform: uppercase;
+}
+.highlight.is-expired { display: none; }

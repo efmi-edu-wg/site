@@ -38,7 +38,7 @@ git add -A && git commit -m "Describe your change" && git push
 
 | Menu | Page file | What it contains |
 |---|---|---|
-| Home | `index.html` | Mission, **upcoming events**, "Join the WG" button |
+| Home | `index.html` | **Highlight** (next activity / news), mission, **upcoming events**, "Join the WG" button |
 | About | `about.html` | About the WG and history |
 | | `members.html` | **Members** (chairs & board incl. honorary chair, national representatives, members, former members) with LinkedIn/ORCID |
 | | `participate.html` | How to participate + Baserow membership form |
@@ -77,6 +77,12 @@ On phones the sub-menus are shown expanded inside the "Menu" button.
 ---
 
 ## 3. Common tasks
+
+### Change the highlight on the home page
+The box right under the title of `index.html` shows the next activity or a news item. Find `<!-- HIGHLIGHTS`
+and edit the `<article class="highlight">` block: label (e.g. "Now · EFMI STC 2026" or "News"), title, date, text and buttons.
+Copy the block to show more than one. Set `data-until="YYYY-MM-DD"` to the last day it should appear: after that
+day it hides itself, and when no highlight is left the whole box disappears. Remove `data-until` to keep it until you change it.
 
 ### Add an upcoming event
 In `index.html`, find `<!-- To add an event -->`, copy one `<article class="card">…</article>`
