@@ -75,6 +75,9 @@ To add a page to a sub-menu: create the page (copy a page of the same section), 
 `<li><a href="new-page.html">Title</a></li>` to the right `<ul class="submenu">` in **all** pages, and add the same link
 to the tabs (`<ul class="subnav">`) of the pages in that section. On your computer, use "Find and replace in files".
 On phones the sub-menus are shown expanded inside the "Menu" button.
+The header also has two icon links, **WG EDU on efmi.org** and **WG EDU on LinkedIn** (`<div class="header-links">`), and the footer has a
+"Follow WG EDU" column with the same links. If an address changes, use "Find and replace in files" for
+`https://efmi.org/workinggroups/edu-education/` or `https://www.linkedin.com/showcase/edu-efmi-wg`.
 
 ---
 

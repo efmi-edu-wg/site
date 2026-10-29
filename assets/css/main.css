@@ -365,3 +365,12 @@ details[open] summary { margin-bottom: 0.6rem; }
 /* Education groups worldwide */
 .tag-good { background: var(--color-good-bg); color: var(--color-good); border-color: transparent; }
 .note { color: var(--color-text-muted); font-size: 0.92rem; margin-top: 1.25rem; max-width: 52rem; }
+
+/* Header links: WG EDU on efmi.org and LinkedIn (on every page) */
+.header-links { display: flex; gap: 0.4rem; }
+.header-links .icon-btn { padding: 0; width: 2.75rem; text-decoration: none; color: var(--color-link); }
+.header-links .icon-btn:hover { color: var(--color-link-hover); }
+.efmi-mark { font-family: var(--font-heading); font-weight: 800; font-size: 0.68rem; letter-spacing: 0.02em; }
+@media (max-width: 26rem) { .brand-text { min-width: 0; } .header-links { gap: 0.25rem; } .header-links .icon-btn { width: 2.5rem; min-width: 2.5rem; } }
+@media (max-width: 23rem) { .header-links .icon-btn:first-child { display: none; } }
+@media (max-width: 21rem) { .nav-toggle span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); } }
