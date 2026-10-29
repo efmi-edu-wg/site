@@ -3,7 +3,7 @@
 Website of the **EFMI Working Group on Education in Biomedical and Health Informatics**
 (<https://efmi.org/workinggroups/edu-education/>).
 
-- **Live site:** <https://ricardojccorreia.github.io/efmi-wg-edu/>
+- **Live site:** <https://efmi-edu-wg.github.io/site/>
 - **Stack:** plain HTML, CSS and JavaScript. No framework, no build step, no dependencies.
 - **Hosting:** GitHub Pages, published automatically from the `main` branch.
 - **Databases and forms:** Baserow (EU cloud), embedded with `<iframe>`.
@@ -25,8 +25,8 @@ Website of the **EFMI Working Group on Education in Biomedical and Health Inform
 ### Option B – on your computer
 
 ```bash
-git clone https://github.com/ricardojccorreia/efmi-wg-edu.git
-cd efmi-wg-edu
+git clone https://github.com/efmi-edu-wg/site.git
+cd site
 python3 -m http.server 8000      # then open http://localhost:8000
 # edit files, then:
 git add -A && git commit -m "Describe your change" && git push
@@ -58,7 +58,7 @@ git add -A && git commit -m "Describe your change" && git push
 | GenAI Lab | `genai-lab.html` | GenAI questionnaire |
 | | `genai-resources.html` | Resources + Baserow suggestion form |
 | Footer | `privacy.html`, `accessibility.html` | Privacy notice, accessibility statement |
-| – | `404.html` | "Page not found" (uses absolute `/efmi-wg-edu/` paths) |
+| – | `404.html` | "Page not found" (uses absolute `/site/` paths) |
 | – | `events/aaaa.mm.dd event/` | **One folder per event**: `index.html`, `photos/`, `documents/` |
 | `assets/css/tokens.css` | **All colours** (EFMI palette, light and dark mode) |
 | `assets/css/main.css` | Layout and components |
@@ -126,6 +126,11 @@ In `publications.html`, add a `<li>` to the right year inside `<ul class="pubs">
 <li>Author A, Author B. Title. <em>Journal.</em> 2026;1:1-2. <a class="doi" href="https://doi.org/10.xxxx/xxxx">doi:10.xxxx/xxxx</a></li>
 ```
 Optional: add the same publication to the `application/ld+json` block at the end of the page (metadata for search engines).
+
+**Or via Zenodo:** publications (resource type *Publication*) in the Zenodo community `efmi-wg-edu` are added to the
+list in the browser. If the DOI is already on the page, the entry only gets an "Open access copy (Zenodo)" link.
+For an accepted manuscript, enter the publisher's DOI in Zenodo as a related identifier ("Is identical to" or
+"Is version of") so it matches. The community slug is set in `data-zenodo-community` on `publications.html`.
 
 ### Add or change a member
 In `members.html`, copy a `<li>` inside the right `<ul class="people">` list. **Ask the person for consent before listing them.**
