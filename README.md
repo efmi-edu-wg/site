@@ -115,9 +115,9 @@ In `accredited.html`, copy a `<tr>` of the table. Keep the small AC2 mark only f
 
 ### Update the IMIA mapping template
 The spreadsheet in `assets/templates/` is a download linked from `guidelines.html#mapping-template`. Edit it in Excel or
-LibreOffice and keep the sheet names (`Instructions`, `Programme`, `Mapping`, `Coverage`; `Lists` is hidden and feeds the
-drop-downs). Raise the version number on the Instructions sheet and on the Guidelines page, and update the CSV (headers
-and example rows of `Mapping`). Do not paste the IMIA knowledge/skill tables into it: the paper is not openly licensed,
+LibreOffice and keep the sheet names (`Instructions`, `Programme`, `Quick check`, `Coverage`, `Expert mapping`; `Lists` is hidden and feeds the
+drop-downs). The plain-language domain descriptions are in row 5 of `Quick check` (WG EDU text, to be approved by the WG). Raise the version number on the Instructions sheet and on the Guidelines page, and update the CSV (headers
+and example row of `Quick check`). Do not paste the IMIA knowledge/skill tables into it: the paper is not openly licensed,
 so the template refers to items by number.
 
 ### Add a publication
