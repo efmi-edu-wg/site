@@ -110,49 +110,88 @@
       <p>Accredited programmes may display the EFMI AC2 mark below.</p>
     </div>
     <p class="ac2-logo"><img src="assets/img/efmi-ac2-accredited.png" alt="EFMI AC2 – Accredited Biomedical and Health Informatics Programme" width="388" height="168"></p>
+    <form class="table-filters" data-filter-for="accredited-table" hidden>
+      <label>Type of programme
+        <select name="type">
+          <option value="">All types</option>
+          <option value="training">Training course</option>
+          <option value="bachelor">Bachelor</option>
+          <option value="master">Master</option>
+          <option value="doctorate">Doctorate (PhD)</option>
+        </select>
+      </label>
+      <label>Accredited by
+        <select name="body">
+          <option value="">EFMI and IMIA</option>
+          <option value="efmi">EFMI</option>
+          <option value="imia">IMIA</option>
+        </select>
+      </label>
+      <p class="filter-count" aria-live="polite"></p>
+    </form>
     <div class="table-wrap">
-      <table>
-        <caption class="visually-hidden">Accredited BMHI programmes and courses in Europe</caption>
-        <thead><tr><th scope="col">Programme</th><th scope="col">Institution</th><th scope="col">Country</th><th scope="col">Accreditation</th><th scope="col">Source</th></tr></thead>
+      <table id="accredited-table">
+        <caption class="visually-hidden">Accredited BMHI programmes and courses</caption>
+        <thead><tr><th scope="col">Programme</th><th scope="col">Type</th><th scope="col">Institution</th><th scope="col">Country</th><th scope="col">Accredited by</th><th scope="col">Accreditation</th><th scope="col">Source</th></tr></thead>
         <tbody>
-          <tr>
+          <tr data-type="master" data-body="efmi">
             <td><a href="https://mis.med.up.pt/">Master in Medical Informatics (MIM)</a>, now Master in Health Informatics (MIS)</td>
+            <td><span class="tag">Master</span></td>
             <td>Faculty of Medicine, University of Porto (FMUP)</td>
             <td>Portugal</td>
-            <td><img class="ac2-badge" src="assets/img/efmi-ac2-accredited.png" alt="" width="97" height="42"> EFMI, 2022–2025 (3 years) · <span class="validate">TO VALIDATE: re-accreditation after 2025</span></td>
+            <td><img class="ac2-badge" src="assets/img/efmi-ac2-accredited.png" alt="" width="97" height="42"> <span class="tag">EFMI</span></td>
+            <td>2022–2025 (3 years) · <span class="validate">TO VALIDATE: re-accreditation after 2025</span></td>
             <td><a href="https://mis.med.up.pt/en/?p=5502">Programme news</a></td>
           </tr>
-          <tr>
+          <tr data-type="master" data-body="efmi">
             <td>Master's programme in Medical Informatics</td>
+            <td><span class="tag">Master</span></td>
             <td>UMIT TIROL – Private University for Health Sciences and Health Technology</td>
             <td>Austria</td>
-            <td><img class="ac2-badge" src="assets/img/efmi-ac2-accredited.png" alt="" width="97" height="42"> EFMI, 2020 – first programme accredited by EFMI · <span class="validate">TO VALIDATE: current status</span></td>
+            <td><img class="ac2-badge" src="assets/img/efmi-ac2-accredited.png" alt="" width="97" height="42"> <span class="tag">EFMI</span></td>
+            <td>2020 – first programme accredited by EFMI · <span class="validate">TO VALIDATE: current status</span></td>
             <td><a href="https://doi.org/10.3233/SHTI210085">Ammenwerth, Stud Health Technol Inform 2021</a></td>
           </tr>
-          <tr>
+          <tr data-type="master" data-body="efmi">
             <td><a href="https://www.uwtsd.ac.uk/programme-courses/postgraduate-pgce/health-and-social-care/digital-transformation-health-and-care">MSc Digital Transformation for the Health and Care Professions</a> (part-time, distance learning)</td>
+            <td><span class="tag">Master</span></td>
             <td>University of Wales Trinity Saint David (UWTSD)</td>
             <td>United Kingdom</td>
-            <td><img class="ac2-badge" src="assets/img/efmi-ac2-accredited.png" alt="" width="97" height="42"> EFMI, first accredited 2023; re-accredited 2026–2031 (5 years), announced at MIE 2026</td>
+            <td><img class="ac2-badge" src="assets/img/efmi-ac2-accredited.png" alt="" width="97" height="42"> <span class="tag">EFMI</span></td>
+            <td>First accredited 2023; re-accredited 2026–2031 (5 years), announced at MIE 2026</td>
             <td><a href="https://www.uwtsd.ac.uk/news/uwtsd-digital-health-masters-programme-receives-prestigious-european-re-accreditation">University news, June 2026</a></td>
           </tr>
-          <tr>
+          <tr data-type="master" data-body="imia">
             <td><a href="https://www.uef.fi/fi/koulutus/sosiaali-ja-terveydenhuollon-tiedonhallinnan-maisteriohjelma">Master's Programme in Health and Social Care Information Management</a> (Sosiaali- ja terveydenhuollon tiedonhallinnan maisteriohjelma)</td>
+            <td><span class="tag">Master</span></td>
             <td>University of Eastern Finland (UEF), Kuopio</td>
             <td>Finland</td>
-            <td>IMIA, 2012 and 2018 · <span class="validate">TO VALIDATE: current accreditation</span></td>
+            <td><span class="tag">IMIA</span></td>
+            <td>2012 and 2018 · <span class="validate">TO VALIDATE: current accreditation</span></td>
             <td><a href="https://journal.fi/finjehew/article/view/77593">Saranto &amp; Kinnunen, FinJeHeW 2019</a></td>
           </tr>
-          <tr>
+          <tr data-type="bachelor master" data-body="imia">
+            <td>Study track “Medical Informatics – Health Information Officer” (B.Sc. and M.Sc.), built up from 2000 by Prof. Otto Rienhoff; continued as <a href="https://medizininformatik.umg.eu/en/study-and-teaching/study-programmes/applied-informatics/">Applied Computer Science, Professionalization in Medical Informatics</a></td>
+            <td><span class="tag">Bachelor</span><span class="tag">Master</span></td>
+            <td>Georg-August-Universität Göttingen, with the Department of Medical Informatics, University Medical Center Göttingen (UMG)</td>
+            <td>Germany</td>
+            <td><span class="tag">IMIA</span></td>
+            <td>2013 and 2017 · <span class="validate">TO VALIDATE: current status</span></td>
+            <td><a href="https://medizininformatik.umg.eu/fileadmin/Redaktion/Medizinische_Informatik/Ueber_uns/CV_Rienhoff_2025.pdf">CV of Prof. Otto Rienhoff (2025, German)</a></td>
+          </tr>
+          <tr data-type="training" data-body="">
             <td><a href="https://www.insafedare.org/">INSAFEDARE training course</a> on assuring real-world and synthetic data for regulatory decision support · <span class="validate">TO VALIDATE: course title and link</span></td>
+            <td><span class="tag">Training course</span></td>
             <td>INSAFEDARE consortium (Horizon Europe project 101095661)</td>
             <td>Europe</td>
-            <td>Accredited · <span class="validate">TO VALIDATE: accrediting body and period</span></td>
+            <td><span class="validate">TO VALIDATE: EFMI or IMIA</span></td>
+            <td>Accredited · <span class="validate">TO VALIDATE: period</span></td>
             <td><a href="https://cordis.europa.eu/project/id/101095661">CORDIS project page</a></td>
           </tr>
         </tbody>
       </table>
     </div>
+    <p class="filter-empty" hidden>No accredited programme of this type yet.</p>
     <p style="margin-top:1rem">This list is built from public sources and may be incomplete. <span class="validate">TO VALIDATE: full list of EFMI and IMIA accredited programmes from AC2</span>
       Is your programme accredited? <a href="programmes.html#add">Tell us</a>.</p>
   </div>

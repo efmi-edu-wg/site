@@ -84,6 +84,32 @@
   var hl = document.querySelector(".highlights");
   if (hl && !hl.querySelector(".highlight:not(.is-expired)")) hl.hidden = true;
 
+  // Table filters: each <select name> matches a space-separated data-<name> on the rows.
+  Array.prototype.forEach.call(document.querySelectorAll(".table-filters[data-filter-for]"), function (form) {
+    var table = document.getElementById(form.getAttribute("data-filter-for"));
+    if (!table) return;
+    var rows = Array.prototype.slice.call(table.tBodies[0].rows);
+    var selects = Array.prototype.slice.call(form.querySelectorAll("select"));
+    var count = form.querySelector(".filter-count");
+    var empty = form.parentNode.querySelector(".filter-empty");
+    function apply() {
+      var shown = 0;
+      rows.forEach(function (row) {
+        var ok = selects.every(function (s) {
+          return !s.value || (" " + (row.getAttribute("data-" + s.name) || "") + " ").indexOf(" " + s.value + " ") !== -1;
+        });
+        row.hidden = !ok;
+        if (ok) shown++;
+      });
+      if (count) count.textContent = "Showing " + shown + " of " + rows.length;
+      if (empty) empty.hidden = shown > 0;
+    }
+    form.addEventListener("change", apply);
+    form.addEventListener("submit", function (e) { e.preventDefault(); });
+    form.hidden = false;
+    apply();
+  });
+
   // Current year in footer
   var year = document.getElementById("year");
   if (year) year.textContent = new Date().getFullYear();

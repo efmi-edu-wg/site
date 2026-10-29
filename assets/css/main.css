@@ -333,6 +333,18 @@ details[open] summary { margin-bottom: 0.6rem; }
 /* EFMI AC2 accreditation mark */
 .ac2-logo img { width: min(100%, 18rem); height: auto; background: #fff; border-radius: 12px; padding: 0.4rem; }
 .ac2-badge { height: 2.2rem; width: auto; vertical-align: middle; background: #fff; border-radius: 6px; padding: 2px; margin-right: 0.3rem; }
+
+/* Table filters (accredited programmes) */
+.table-filters { display: flex; flex-wrap: wrap; align-items: end; gap: 0.75rem 1.25rem; margin: 1.25rem 0 0.9rem; }
+.table-filters[hidden] { display: none; }
+.table-filters label { display: flex; flex-direction: column; gap: 0.3rem; font-weight: 700; font-size: 0.92rem; }
+.table-filters select {
+  font: inherit; font-weight: 400; min-height: 2.75rem; padding: 0.4rem 0.6rem; min-width: 12rem;
+  color: var(--color-text); background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius);
+}
+.table-filters .filter-count { margin: 0; color: var(--color-text-muted); font-size: 0.92rem; padding-bottom: 0.6rem; }
+.filter-empty { margin-top: 0.75rem; color: var(--color-text-muted); }
+tr[hidden] { display: none; }
 @media (max-width: 70rem) {
   .site-nav.is-open { max-height: calc(100vh - 4.5rem); max-height: calc(100dvh - 4.5rem); overflow-y: auto; overscroll-behavior: contain; }
 }
