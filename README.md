@@ -92,7 +92,9 @@ day it hides itself, and when no highlight is left the whole box disappears. Rem
 
 ### Add an upcoming event
 In `index.html`, find `<!-- To add an event -->`, copy one `<article class="card">…</article>`
-block and edit the date, title and text. After the event, move it to `activities.html`
+block and edit the date, title and text. Set `data-until="YYYY-MM-DD"` to the last day of the event: after that
+day the card hides itself, and when no card is left the page shows "No WG meeting is scheduled yet". An event that
+is already in the highlight box does not need a card as well. After the event, move it to `activities.html`
 (section `past-events`) as a new `<li>` at the top of the timeline.
 
 ### Add a past event (folder + page)

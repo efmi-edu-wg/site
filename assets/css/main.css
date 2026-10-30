@@ -350,7 +350,8 @@ tr[hidden] { display: none; }
   font-family: var(--font-heading); font-weight: 700; font-size: 0.8rem;
   letter-spacing: 0.06em; text-transform: uppercase;
 }
-.highlight.is-expired { display: none; }
+.is-expired, .upcoming-events .grid[hidden], .events-empty[hidden] { display: none; }
+.events-empty { color: var(--color-text-muted); max-width: 52rem; }
 
 /* Guidelines: mapping template download */
 .template-card { margin-top: 1.5rem; border-left: 6px solid var(--color-primary); }

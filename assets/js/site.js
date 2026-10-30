@@ -79,13 +79,22 @@
     if (openBtn) { closeAll(null); openBtn.parentNode.classList.add("is-closed"); openBtn.focus(); }
   });
 
-  // Home highlights: hide items after their data-until day, and the section when none is left.
-  var today = new Date().toISOString().slice(0, 10);
-  Array.prototype.forEach.call(document.querySelectorAll(".highlight[data-until]"), function (el) {
+  // Home highlights and upcoming events: hide items after their data-until day (visitor's local date).
+  // When no highlight is left the section is hidden; when no event is left the empty note is shown.
+  var now = new Date();
+  var today = now.getFullYear() + "-" + ("0" + (now.getMonth() + 1)).slice(-2) + "-" + ("0" + now.getDate()).slice(-2);
+  Array.prototype.forEach.call(document.querySelectorAll("[data-until]"), function (el) {
     if (el.getAttribute("data-until") < today) el.classList.add("is-expired");
   });
   var hl = document.querySelector(".highlights");
   if (hl && !hl.querySelector(".highlight:not(.is-expired)")) hl.hidden = true;
+  var ev = document.querySelector(".upcoming-events");
+  if (ev && !ev.querySelector(".card:not(.is-expired)")) {
+    var list = ev.querySelector(".grid");
+    var note = ev.querySelector(".events-empty");
+    if (list) list.hidden = true;
+    if (note) note.hidden = false;
+  }
 
   // Table filters: each <select name> matches a space-separated data-<name> on the rows.
   Array.prototype.forEach.call(document.querySelectorAll(".table-filters[data-filter-for]"), function (form) {

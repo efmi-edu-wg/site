@@ -161,25 +161,23 @@
   </div>
 </section>
 
-<section class="section" aria-labelledby="events">
+<section class="section upcoming-events" aria-labelledby="events">
   <div class="container">
     <h2 id="events">Upcoming events</h2>
     <p>Meetings are usually held at EFMI conferences (MIE in spring, STC in autumn) and at MEDINFO.</p>
-    <!-- To add an event: copy one <article> block below and edit it. Move past events to activities.html. -->
+    <!-- To add an event: copy one <article> block below and edit it. data-until="YYYY-MM-DD" is the last day
+         of the event: after that day the card hides itself. Then move the event to activities.html.
+         An event shown in the Highlights box above does not need a card here as well. -->
     <div class="grid grid-2">
-      <article class="card">
-        <p class="meta"><time datetime="2026-10-29">29–31 October 2026</time> · Athens, Greece</p>
-        <h3>EFMI STC 2026</h3>
-        <p>EFMI Special Topic Conference. Open WG EDU meeting on Saturday 31 October, morning – any participant can join.</p>
-        <p><a href="https://stc2026.efmi.org/home-page">Conference website</a></p>
-      </article>
-      <article class="card">
+      <article class="card" data-until="2027-04-30">
         <p class="meta"><time datetime="2027-04-26">26–30 April 2027</time> · Tallinn, Estonia</p>
         <h3>MIE 2027</h3>
         <p>Medical Informatics Europe. Planned WG EDU workshop on BMHI programmes across Europe and the European education database. <span class="validate">TO VALIDATE</span></p>
         <p><a href="https://mie2027.efmi.org/home-page">Conference website</a></p>
       </article>
     </div>
+    <p class="events-empty" hidden>No WG meeting is scheduled yet. The next one will be announced here and on
+      <a href="https://www.linkedin.com/showcase/edu-efmi-wg">LinkedIn</a>.</p>
     <p style="margin-top:1rem"><a href="activities.html#past-events">See past events</a></p>
   </div>
 </section>
