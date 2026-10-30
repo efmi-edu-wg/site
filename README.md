@@ -7,8 +7,11 @@ Website of the **EFMI Working Group on Education in Biomedical and Health Inform
 - **Stack:** plain HTML, CSS and JavaScript. No framework, no build step, no dependencies.
 - **Hosting:** GitHub Pages, published automatically from the `main` branch.
 - **Databases and forms:** Baserow (EU cloud), embedded with `<iframe>`.
-- **Status:** first draft for validation by the WG chairs. Text that needs checking is marked with
-  <span>`TO VALIDATE`</span> (yellow label on the page).
+- **Status:** public. Text that still needs checking by the WG chairs is marked with
+  <span>`TO VALIDATE`</span>. These labels are hidden on the public site; add `?validate` to any page URL
+  (for example `index.html?validate`) to show them as yellow labels.
+- **Not in the menu yet:** `course-assistant.html`, `open-data.html` and the database part of `programmes.html`
+  (its form is still linked from How to participate and Accredited programmes). Add them back to the menu on every page when ready.
 
 ---
 

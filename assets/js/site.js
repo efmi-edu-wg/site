@@ -6,6 +6,9 @@
   var root = document.documentElement;
   var STORAGE_KEY = "efmi-wg-edu-theme";
 
+  // "TO VALIDATE" labels are hidden by main.css; open any page with ?validate to review them.
+  if (/[?&]validate\b/.test(window.location.search)) root.classList.add("show-validate");
+
   function systemPrefersDark() {
     return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
   }
