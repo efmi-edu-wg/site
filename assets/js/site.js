@@ -16,13 +16,21 @@
     return root.getAttribute("data-theme") || (systemPrefersDark() ? "dark" : "light");
   }
 
-  // Theme toggle
+  // Theme toggle: the button names the mode it switches to ("Switch to dark mode").
   var themeBtn = document.querySelector(".theme-toggle");
   function syncThemeButton() {
     if (!themeBtn) return;
     var dark = currentTheme() === "dark";
-    themeBtn.setAttribute("aria-pressed", String(dark));
-    themeBtn.querySelector(".theme-label").textContent = dark ? "Dark" : "Light";
+    themeBtn.removeAttribute("aria-pressed");
+    var prefix = themeBtn.querySelector(".visually-hidden");
+    if (prefix) prefix.textContent = "Switch to ";
+    themeBtn.querySelector(".theme-label").textContent = dark ? "Light mode" : "Dark mode";
+  }
+  // Keep the label right when the system theme changes while the page is open.
+  if (window.matchMedia) {
+    var mq = window.matchMedia("(prefers-color-scheme: dark)");
+    if (mq.addEventListener) mq.addEventListener("change", syncThemeButton);
+    else if (mq.addListener) mq.addListener(syncThemeButton);
   }
   if (themeBtn) {
     themeBtn.addEventListener("click", function () {

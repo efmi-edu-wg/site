@@ -101,6 +101,11 @@ a:hover { color: var(--color-link-hover); }
 .icon-btn:hover { background: var(--color-surface-2); }
 .icon-btn svg { width: 1.25rem; height: 1.25rem; }
 .nav-toggle { display: none; }
+.theme-toggle { white-space: nowrap; }
+/* Wide screens: the full menu fills the header, so the theme button shows its icon only (name stays for screen readers) */
+@media (min-width: 70.01rem) {
+  .theme-toggle .theme-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+}
 
 @media (max-width: 70rem) {
   .nav-toggle { display: inline-flex; }
