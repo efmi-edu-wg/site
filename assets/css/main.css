@@ -375,3 +375,31 @@ tr[hidden] { display: none; }
 @media (max-width: 23rem) { .header-links .icon-btn:first-child { display: none; } }
 @media (max-width: 21rem) { .nav-toggle span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); } }
 .ac2-logo { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.5rem; }
+
+/* ---------- Home layout ---------- */
+/* Highlight + upcoming events are grouped so the hero's "Upcoming events" link lands on whichever is shown first. */
+.section-group + .section { border-top: 1px solid var(--color-border); }
+.grid-4 { grid-template-columns: 1fr; }
+@media (min-width: 36rem) { .grid-4 { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 64rem) { .grid-4 { grid-template-columns: repeat(4, 1fr); } }
+/* Mission objectives: plain list, so only cards that are links look like cards */
+.objectives {
+  list-style: none; padding: 0; margin: 1.75rem 0 0;
+  display: grid; gap: 1.5rem 2.5rem; grid-template-columns: 1fr;
+}
+@media (min-width: 48rem) { .objectives { grid-template-columns: repeat(2, 1fr); } }
+.objectives li { border-top: 1px solid var(--color-border); padding-top: 1rem; }
+.objectives h3 { margin: 0 0 0.35rem; }
+.objectives p { margin: 0; color: var(--color-text-muted); }
+.objectives-note {
+  margin-top: 2rem; padding: 1.1rem 1.35rem;
+  background: var(--color-surface-2); border-radius: var(--radius);
+}
+.objectives-note h3 { margin: 0 0 0.3rem; font-size: 1.05rem; }
+.objectives-note p { margin: 0; }
+/* Closing invitation */
+.join-band { background: var(--color-surface-2); }
+.join-band h2 { margin-top: 0; }
+.join-band p { max-width: 46rem; }
+/* A single upcoming event keeps the width of one column instead of stretching across the page */
+.upcoming-events .grid-2 { grid-template-columns: repeat(auto-fill, minmax(min(100%, 24rem), 1fr)); }
