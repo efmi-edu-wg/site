@@ -58,16 +58,14 @@ git add -A && git commit -m "Describe your change" && git push
 | | `publications.html` | Publications (with schema.org metadata) |
 | | `projects.html` | European projects |
 | | `open-knowledge.html` | EU open science infrastructures, OER, funding, policy |
-| GenAI Lab | `genai-lab.html` | GenAI questionnaire |
-| | `genai-resources.html` | Resources + Baserow suggestion form |
+| GenAI Lab | `genai-resources.html` | Resources, safer alternatives + Baserow suggestion form |
+| | `genai-lab.html` | Redirect to `genai-resources.html` (keeps old links working) |
 | Footer | `privacy.html`, `accessibility.html` | Privacy notice, accessibility statement |
 | – | `404.html` | "Page not found" (uses absolute `/site/` paths) |
 | – | `events/aaaa.mm.dd event/` | **One folder per event**: `index.html`, `photos/`, `documents/` |
 | `assets/css/tokens.css` | **All colours** (EFMI palette, light and dark mode) |
 | `assets/css/main.css` | Layout and components |
 | `assets/js/site.js` | Mobile menu and light/dark toggle |
-| `assets/js/genai-quiz-data.js` | **Questionnaire scenarios** (edit text here) |
-| `assets/js/genai-quiz.js` | Questionnaire logic (normally no need to touch) |
 | `assets/img/` | Logos and favicon |
 
 ### Header, menu and footer
@@ -137,11 +135,6 @@ For an accepted manuscript, enter the publisher's DOI in Zenodo as a related ide
 
 ### Add or change a member
 In `members.html`, copy a `<li>` inside the right `<ul class="people">` list. **Ask the person for consent before listing them.**
-
-### Edit the GenAI questionnaire
-Open `assets/js/genai-quiz-data.js`. Each scenario is a block `{ id, topic, text, answer, why, instead }`.
-`answer` must be `"ok"`, `"caution"` or `"avoid"`. Alternatives use `type` `"local"`, `"institutional"`,
-`"european"` or `"practice"`. Keep the commas between blocks.
 
 ### Remove a "TO VALIDATE" label
 Once a fact is confirmed, delete `<span class="validate">TO VALIDATE…</span>`.
