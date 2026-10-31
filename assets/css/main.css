@@ -277,6 +277,9 @@ details[open] summary { margin-bottom: 0.6rem; }
 .container.prose { max-width: var(--max-width); }
 .container.prose > * { max-width: 48rem; }
 .embed-form { display: block; }
+/* Tall enough for the whole Baserow form, so it never scrolls inside the frame (measured: ~1300px desktop, ~1400px phone) */
+.embed-form-join { height: 84rem; }
+@media (max-width: 40rem) { .embed-form-join { height: 91rem; } }
 .embed-fallback { font-size: 0.9rem; color: var(--color-text-muted); margin-top: 0.5rem; }
 
 /* ---------- Dropdown sub-menus ---------- */
