@@ -107,6 +107,12 @@ is already in the highlight box does not need a card as well. After the event, m
 4. In `activities.html`, add a line at the top of the past-events timeline linking to the folder
    (spaces become `%20`, e.g. `events/2026.10.29%20EFMI%20STC%202026%20Athens/`).
 
+### Update the conference papers list
+`data/conference-papers.csv` feeds `conference-papers.html` and the "Education papers and keynotes" section of event pages
+(the browser reads it when the page opens). One row per contribution; `topics` are separated by `;`. Only rows with
+`status` = `Validated` are shown; add `?preview` to the page address to see `Proposed` rows as well. Paste the DOI in `doi`
+when the proceedings are out: the title then links to it. Edit the file in a spreadsheet and save as CSV (UTF-8), or on GitHub.
+
 ### Add profile links to a member
 In `members.html`, each member has `<span class="profile-links">` with LinkedIn and ORCID links. ORCID iDs were matched by
 name and affiliation; ask each member to confirm theirs.

@@ -414,3 +414,33 @@ tr[hidden] { display: none; }
 .join-band p { max-width: 46rem; }
 /* A single upcoming event keeps the width of one column instead of stretching across the page */
 .upcoming-events .grid-2 { grid-template-columns: repeat(auto-fill, minmax(min(100%, 24rem), 1fr)); }
+
+/* ---------- Conference papers (read from data/conference-papers.csv) ---------- */
+.paper-filters input[type="search"] {
+  font: inherit; font-weight: 400; min-height: 2.75rem; padding: 0.4rem 0.6rem; min-width: 16rem;
+  color: var(--color-text); background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius);
+}
+@media (max-width: 40rem) { .paper-filters label, .paper-filters select, .paper-filters input[type="search"] { width: 100%; min-width: 0; } }
+.paper-event { margin-top: 1.75rem; }
+.paper-event[hidden], .paper[hidden] { display: none; }
+.paper-event h3 { margin: 0 0 0.5rem; padding-bottom: 0.4rem; border-bottom: 3px solid var(--color-accent); }
+.paper-items { list-style: none; margin: 0; padding: 0; }
+.paper { padding: 1rem 0; border-bottom: 1px solid var(--color-border); }
+.paper:last-child { border-bottom: 0; }
+.paper p { margin: 0; }
+.paper-kind {
+  font-family: var(--font-heading); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--color-text-muted); display: flex; gap: 0.5rem; align-items: center;
+}
+.paper-proposed { padding: 0 0.5rem; border-radius: 999px; background: var(--color-surface-2); color: var(--color-link); letter-spacing: 0.03em; }
+.paper-title { margin-top: 0.2rem !important; font-family: var(--font-heading); font-weight: 700; font-size: 1.05rem; line-height: 1.35; max-width: 52rem; }
+.paper-meta { margin-top: 0.3rem !important; color: var(--color-text-muted); font-size: 0.92rem; }
+.paper-why { margin-top: 0.45rem !important; max-width: 52rem; }
+.paper-tags { margin-top: 0.6rem !important; display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center; }
+.paper-tags .tag {
+  display: inline-flex; align-items: center; min-height: 2rem; padding: 0 0.7rem; border-radius: 999px;
+  background: var(--color-surface-2); border: 1px solid var(--color-border); font-size: 0.85rem; text-decoration: none;
+}
+.paper-tags .tag:hover { border-color: var(--color-link); }
+.paper-link { margin-left: auto; color: var(--color-text-muted); font-size: 0.85rem; }
+.paper-download { margin-top: 1.5rem; }

@@ -255,6 +255,189 @@
     return ul2;
   }
 
+  // Conference papers: read the CSV named in data-papers-src and show it as a list grouped by event.
+  // Only rows with status "Validated" are shown (add ?preview to the address to see "Proposed" rows too).
+  // data-papers-event limits the list to one event; data-papers-filters adds the filter bar.
+  Array.prototype.forEach.call(document.querySelectorAll("[data-papers-src]"), function (box) {
+    if (!window.fetch) return;
+    fetch(box.getAttribute("data-papers-src"))
+      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.text(); })
+      .then(function (text) { renderPapers(box, parseCsv(text)); })
+      .catch(function () {
+        var msg = box.querySelector(".paper-loading");
+        if (msg) msg.textContent = "The list could not be loaded. You can still download the CSV file.";
+      });
+  });
+
+  // RFC 4180 CSV: quoted fields may hold commas, line breaks and doubled quotes. Returns objects keyed by the header row.
+  function parseCsv(text) {
+    var rows = [], row = [], field = "", q = false;
+    text = text.replace(/^﻿/, "");
+    for (var i = 0; i < text.length; i++) {
+      var c = text.charAt(i);
+      if (q) {
+        if (c === '"') { if (text.charAt(i + 1) === '"') { field += '"'; i++; } else q = false; }
+        else field += c;
+      } else if (c === '"') q = true;
+      else if (c === ",") { row.push(field); field = ""; }
+      else if (c === "\n" || c === "\r") {
+        if (c === "\r" && text.charAt(i + 1) === "\n") i++;
+        row.push(field); field = "";
+        if (row.join("") !== "") rows.push(row);
+        row = [];
+      } else field += c;
+    }
+    row.push(field);
+    if (row.join("") !== "") rows.push(row);
+    var head = (rows.shift() || []).map(function (h) { return h.trim().toLowerCase(); });
+    return rows.map(function (r) {
+      var o = {};
+      head.forEach(function (h, k) { o[h] = (r[k] || "").trim(); });
+      return o;
+    });
+  }
+
+  var TYPE_ORDER = ["Keynote", "Workshop", "Panel", "Paper", "Short communication", "Poster"];
+  var MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+  function safeUrl(u) { return /^(https?:\/\/|[\w.\-\/%]+$)/i.test(u) && !/^javascript:/i.test(u) ? u : ""; }
+  function shortDate(d) {
+    var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(d || "");
+    return m ? parseInt(m[3], 10) + " " + MONTHS[parseInt(m[2], 10) - 1] + " " + m[1] : d;
+  }
+  function topicsOf(p) { return p.topics.split(";").map(function (t) { return t.trim(); }).filter(Boolean); }
+
+  function renderPapers(box, all) {
+    var preview = /[?&]preview\b/.test(location.search);
+    var only = box.getAttribute("data-papers-event");
+    var base = box.getAttribute("data-papers-base") || "";
+    var papers = all.filter(function (p) {
+      var st = (p.status || "").toLowerCase();
+      return p.title && (st === "validated" || (preview && st === "proposed")) && (!only || p.event === only);
+    });
+    var loading = box.querySelector(".paper-loading");
+    if (loading) loading.remove();
+    if (!papers.length) {
+      box.appendChild(el("p", { "class": "filter-empty" }, "No entries yet."));
+      return;
+    }
+
+    // Events newest first; inside an event, by type, then in CSV order.
+    var events = [];
+    papers.forEach(function (p, i) {
+      p._i = i;
+      var e = events.filter(function (x) { return x.name === p.event; })[0];
+      if (!e) { e = { name: p.event, page: p.event_page, last: "", items: [] }; events.push(e); }
+      if (p.date > e.last) e.last = p.date;
+      e.items.push(p);
+    });
+    events.sort(function (a, b) { return a.last < b.last ? 1 : -1; });
+
+    var filters = box.hasAttribute("data-papers-filters") ? paperFilters(box, papers, events) : null;
+    events.forEach(function (e) {
+      var sec = el("section", { "class": "paper-event" });
+      if (!only) {
+        var h = el("h3", {});
+        var page = safeUrl(e.page);
+        if (page) h.appendChild(el("a", { href: base + page }, e.name)); else h.textContent = e.name;
+        sec.appendChild(h);
+      }
+      var ul = el("ul", { "class": "paper-items" });
+      e.items.sort(function (a, b) {
+        var ta = TYPE_ORDER.indexOf(a.type), tb = TYPE_ORDER.indexOf(b.type);
+        return (ta < 0 ? 99 : ta) - (tb < 0 ? 99 : tb) || a._i - b._i;
+      }).forEach(function (p) { ul.appendChild(paperItem(p, base, filters)); });
+      sec.appendChild(ul);
+      box.appendChild(sec);
+    });
+    if (filters) filters.apply();
+  }
+
+  function paperItem(p, base, filters) {
+    var li = el("li", { "class": "paper" });
+    li._paper = p;
+    var top = el("p", { "class": "paper-kind" }, p.type || "Paper");
+    if ((p.status || "").toLowerCase() === "proposed") top.appendChild(el("span", { "class": "paper-proposed" }, "Proposed"));
+    li.appendChild(top);
+    var doi = normDoi(p.doi);
+    var href = doi ? "https://doi.org/" + doi : safeUrl(p.link);
+    var title = el("p", { "class": "paper-title" });
+    if (href) title.appendChild(el("a", { href: href }, p.title)); else title.textContent = p.title;
+    li.appendChild(title);
+    var meta = [p.authors, p.affiliation, [p.session, shortDate(p.date)].filter(Boolean).join(", ")].filter(Boolean).join(" · ");
+    if (meta) li.appendChild(el("p", { "class": "paper-meta" }, meta));
+    if (p.relevance) li.appendChild(el("p", { "class": "paper-why" }, p.relevance));
+    var foot = el("p", { "class": "paper-tags" });
+    topicsOf(p).forEach(function (t) {
+      var a = el("a", { "class": "tag", href: base + "conference-papers.html?topic=" + encodeURIComponent(t) }, t);
+      if (filters) a.addEventListener("click", function (ev) { ev.preventDefault(); filters.set("topic", t); });
+      foot.appendChild(a);
+    });
+    foot.appendChild(el("span", { "class": "paper-link" }, doi ? "doi:" + doi : (href ? "Link: conference programme" : "")));
+    li.appendChild(foot);
+    return li;
+  }
+
+  // Filter bar: event, type and topic selects plus free-text search. Starting values come from ?event=, ?type=, ?topic=, ?q=.
+  function paperFilters(box, papers, events) {
+    var form = el("form", { "class": "table-filters paper-filters", role: "search", "aria-label": "Filter the list" });
+    function uniq(list) { return list.filter(function (v, i) { return v && list.indexOf(v) === i; }); }
+    var opts = {
+      event: events.map(function (e) { return e.name; }),
+      type: uniq(papers.map(function (p) { return p.type; })).sort(function (a, b) { return TYPE_ORDER.indexOf(a) - TYPE_ORDER.indexOf(b); }),
+      topic: uniq([].concat.apply([], papers.map(topicsOf))).sort()
+    };
+    var labels = { event: "Event", type: "Type", topic: "Topic" };
+    var params = new URLSearchParams(location.search);
+    var controls = {};
+    Object.keys(opts).forEach(function (k) {
+      var label = el("label", {}, labels[k]);
+      var sel = el("select", { name: k });
+      sel.appendChild(el("option", { value: "" }, "All"));
+      opts[k].forEach(function (v) { sel.appendChild(el("option", { value: v }, v)); });
+      if (params.get(k)) sel.value = params.get(k);
+      label.appendChild(sel);
+      form.appendChild(label);
+      controls[k] = sel;
+    });
+    var sl = el("label", {}, "Search");
+    var search = el("input", { type: "search", name: "q", placeholder: "Title, author, institution…" });
+    search.value = params.get("q") || "";
+    sl.appendChild(search);
+    form.appendChild(sl);
+    var count = el("p", { "class": "filter-count", role: "status" });
+    form.appendChild(count);
+    box.insertBefore(form, box.firstChild);
+    var empty = el("p", { "class": "filter-empty", hidden: "" }, "No entries match these filters.");
+    box.appendChild(empty);
+
+    function apply() {
+      var q = search.value.trim().toLowerCase(), shown = 0;
+      Array.prototype.forEach.call(box.querySelectorAll(".paper-event"), function (sec) {
+        var any = false;
+        Array.prototype.forEach.call(sec.querySelectorAll(".paper"), function (li) {
+          var p = li._paper;
+          var ok = (!controls.event.value || p.event === controls.event.value) &&
+            (!controls.type.value || p.type === controls.type.value) &&
+            (!controls.topic.value || topicsOf(p).indexOf(controls.topic.value) !== -1) &&
+            (!q || [p.title, p.authors, p.affiliation, p.relevance, p.session].join(" ").toLowerCase().indexOf(q) !== -1);
+          li.hidden = !ok;
+          if (ok) { shown++; any = true; }
+        });
+        sec.hidden = !any;
+      });
+      count.textContent = shown === papers.length ? papers.length + " entries" : "Showing " + shown + " of " + papers.length;
+      empty.hidden = shown > 0;
+    }
+    form.addEventListener("input", apply);
+    form.addEventListener("change", apply);
+    form.addEventListener("submit", function (e) { e.preventDefault(); });
+    return {
+      apply: apply,
+      set: function (k, v) { controls[k].value = v; apply(); form.scrollIntoView({ block: "start" }); }
+    };
+  }
+
   // Current year in footer
   var year = document.getElementById("year");
   if (year) year.textContent = new Date().getFullYear();
