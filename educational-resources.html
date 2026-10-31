@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Educational resources – EFMI WG EDU</title>
-<meta name="description" content="Teaching materials on generative AI in biomedical and health informatics education, shared by educators and reviewed by WG EDU members, with a form to share your own.">
+<meta name="description" content="Teaching materials, guidance and tools on generative AI in biomedical and health informatics education, reviewed by WG EDU members, with a form to share your own.">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="assets/css/tokens.css">
@@ -69,7 +69,6 @@
           <button type="button" class="sub-toggle is-current" aria-expanded="false" aria-controls="sub-genai-lab">GenAI Lab</button>
           <ul class="submenu" id="sub-genai-lab">
             <li><a href="educational-resources.html" aria-current="page">Educational resources</a></li>
-            <li><a href="genai-resources.html">Resources & suggestions</a></li>
           </ul>
         </li>
       </ul>
@@ -95,8 +94,8 @@
   <div class="container">
     <p class="eyebrow">GenAI Lab</p>
     <h1>Educational resources</h1>
-    <p class="lead">Teaching materials on generative AI in biomedical and health informatics education, shared by educators
-      for educators. Share yours; a WG member reviews every submission.</p>
+    <p class="lead">Teaching materials, guidance and tools on generative AI in biomedical and health informatics education,
+      chosen by the community. Share yours; a WG member reviews every submission.</p>
   </div>
 </section>
 
@@ -105,7 +104,7 @@
     <h2 id="shared">Shared by the community</h2>
     <p>Lectures, exercises, case studies, prompt collections and assessments that colleagues use in their teaching.
       Each resource is shown with its authors and licence.</p>
-    <!-- Approved resources go here as cards, like on genai-resources.html. Copy one card per resource:
+    <!-- Approved teaching materials go here as cards. Copy one card per resource:
     <div class="grid">
       <div class="card">
         <span class="tag">Exercise or lab</span><span class="tag">Master</span>
@@ -120,15 +119,82 @@
   </div>
 </section>
 
+<section class="section" aria-labelledby="resources">
+  <div class="container">
+    <h2 id="resources">Guidance, research and tools</h2>
+    <p>Regulations, guidelines, studies and tools on generative AI in education. Each suggestion is checked by a WG member before it appears here.</p>
+    <div class="grid">
+      <div class="card">
+        <span class="tag">Regulation</span><span class="tag">EU</span>
+        <h3>EU AI Act</h3>
+        <p>The EU regulation on AI. Article 4 requires AI literacy for staff, and Annex III lists education uses as high-risk.</p>
+        <p><a href="https://eur-lex.europa.eu/eli/reg/2024/1689/oj">Regulation (EU) 2024/1689</a></p>
+      </div>
+      <div class="card">
+        <span class="tag">Guidance</span><span class="tag">EU</span>
+        <h3>Ethical guidelines for educators</h3>
+        <p>European Commission guidelines on using AI and data in teaching and learning.</p>
+        <p><a href="https://op.europa.eu/en/publication-detail/-/publication/d81a0d54-5348-11ed-92ed-01aa75ed71a1/language-en">Publications Office of the EU</a></p>
+      </div>
+      <div class="card">
+        <span class="tag">Guidance</span><span class="tag">UNESCO</span>
+        <h3>Guidance for GenAI in education and research</h3>
+        <p>UNESCO's global guidance on policies for generative AI in education.</p>
+        <p><a href="https://www.unesco.org/en/articles/guidance-generative-ai-education-and-research">unesco.org</a></p>
+      </div>
+      <div class="card">
+        <span class="tag">Research</span><span class="tag">BMHI</span>
+        <h3>ChatGPT in medical informatics education</h3>
+        <p>Student perceptions and proposals for integrating ChatGPT into a BMHI course.</p>
+        <p><a href="https://doi.org/10.2196/51151">JMIR Med Educ 2024</a></p>
+      </div>
+      <div class="card">
+        <span class="tag">Assessment</span>
+        <h3>AI Assessment Scale</h3>
+        <p>A five-level scale to tell students how much AI they may use in each assessment task.</p>
+        <p><a href="https://aiassessmentscale.com/">aiassessmentscale.com</a> <span class="validate">TO VALIDATE</span></p>
+      </div>
+      <div class="card">
+        <span class="tag">Data</span><span class="tag">Open source</span>
+        <h3>Synthea – synthetic patients</h3>
+        <p>Generates realistic but fictional patient records for teaching, without privacy risk.</p>
+        <p><a href="https://synthetichealth.github.io/synthea/">synthetichealth.github.io</a></p>
+      </div>
+    </div>
+    <!-- BASEROW: once approved resources live in Baserow, replace the cards above with
+         <iframe class="embed-frame" title="GenAI education resources" src="https://baserow.io/public/gallery/XXXX" loading="lazy"></iframe> -->
+  </div>
+</section>
+
+<section class="section" aria-labelledby="alternatives">
+  <div class="container">
+    <h2 id="alternatives">Safer alternatives to public chatbots</h2>
+    <p>When teaching material or student work contains personal or sensitive data, prefer one of these options.</p>
+    <dl>
+        <dt><strong>Local LLM</strong></dt>
+        <dd>An open-weight model (for example Mistral, Llama, Qwen or Gemma) running on your own computer with tools such as
+          <a href="https://ollama.com/">Ollama</a>, <a href="https://lmstudio.ai/">LM Studio</a> or <a href="https://www.nomic.ai/gpt4all">GPT4All</a>.
+          Best when the data must not leave your device.</dd>
+        <dt><strong>Institutional LLM</strong></dt>
+        <dd>A service your university runs or has contracted, with a data processing agreement and clear rules on retention and training.
+          Ask your IT department or Data Protection Officer.</dd>
+        <dt><strong>European LLM</strong></dt>
+        <dd>A provider established in the EU that hosts data in the EU under the GDPR, for example
+          <a href="https://mistral.ai/">Mistral AI</a>, or open European models such as <a href="https://eurollm.io/">EuroLLM</a> and the
+          <a href="https://openeurollm.eu/">OpenEuroLLM</a> project. <span class="validate">TO VALIDATE: list of recommended providers</span></dd>
+    </dl>
+  </div>
+</section>
+
 <section class="section" aria-labelledby="share">
   <div class="container">
     <h2 id="share">Share a resource</h2>
     <div class="grid grid-2">
       <div class="prose">
-        <p>Have you made teaching material on or with generative AI that others could reuse? Send us the link.</p>
+        <p>Have you made teaching material on or with generative AI that others could reuse, or found a useful guide, study or tool? Send us the link.</p>
         <h3>What we look for</h3>
         <ul>
-          <li>Material used in biomedical and health informatics education, at any level.</li>
+          <li>Material useful for biomedical and health informatics education, at any level.</li>
           <li>A public link (for example Zenodo, GitHub or your institution's repository).</li>
           <li>An open licence, such as CC BY, so others may reuse it.</li>
           <li>No personal or patient data.</li>
@@ -140,8 +206,6 @@
           <li>Once approved, it appears on this page with credit to the authors. <strong>Nothing is published without
             human approval.</strong></li>
         </ol>
-        <p>Looking for guidance, regulations or tools rather than teaching material? See
-          <a href="genai-resources.html">GenAI resources &amp; suggestions</a>.</p>
       </div>
       <div><!-- BASEROW form "Share an educational resource" (table Educational Resources → view "Submit form").
              Edit the form in Baserow; this link stays the same. -->

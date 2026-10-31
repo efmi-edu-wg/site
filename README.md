@@ -58,9 +58,8 @@ git add -A && git commit -m "Describe your change" && git push
 | | `publications.html` | Publications (with schema.org metadata) |
 | | `projects.html` | European projects |
 | | `open-knowledge.html` | EU open science infrastructures, OER, funding, policy |
-| GenAI Lab | `educational-resources.html` | Teaching materials shared by educators + Baserow submission form |
-| | `genai-resources.html` | Resources, safer alternatives + Baserow suggestion form |
-| | `genai-lab.html` | Redirect to `genai-resources.html` (keeps old links working) |
+| GenAI Lab | `educational-resources.html` | Teaching materials, guidance and tools, safer alternatives + Baserow submission form |
+| | `genai-resources.html`, `genai-lab.html` | Redirects to `educational-resources.html` (keep old links working) |
 | Footer | `privacy.html`, `accessibility.html` | Privacy notice, accessibility statement |
 | – | `404.html` | "Page not found" (uses absolute `/site/` paths) |
 | – | `events/aaaa.mm.dd event/` | **One folder per event**: `index.html`, `photos/`, `documents/` |
@@ -169,11 +168,10 @@ Database **EFMI_EDU_WG** on baserow.io (workspace of Ricardo Correia). Current s
 |---|---|---|---|
 | `participate.html` | Membership form | Members → *Join form* | **embedded** |
 | `programmes.html#add` | Add a programme | Programmes → *Submit form* | **embedded** |
-| `genai-resources.html#suggest` | Suggest a resource | GenAI Resources → *Suggest form* | **embedded** |
 | `educational-resources.html#share` | Share an educational resource | Educational Resources → *Submit form* (review in *Review queue*) | **embedded** |
 | `programmes.html#database` | Programme database | Programmes → *Public* (grid) | placeholder, view not shared yet |
 | `educational-resources.html#shared` | Approved teaching materials | Educational Resources | static cards, added by hand after approval |
-| `genai-resources.html#resources` | Approved resources | GenAI Resources → *Public* (gallery) | static cards for now, view not shared yet |
+| `educational-resources.html#resources` | Guidance, research and tools | GenAI Resources (older submissions) | static cards |
 
 The form link (`https://baserow.io/form/…`) stays the same when you edit fields in Baserow, so the site
 does not need to change. If you rename a field that the privacy notice mentions, update `privacy.html`.
