@@ -58,7 +58,7 @@ git add -A && git commit -m "Describe your change" && git push
 | | `publications.html` | Publications (with schema.org metadata) |
 | | `projects.html` | European projects |
 | | `open-knowledge.html` | EU open science infrastructures, OER, funding, policy |
-| GenAI Lab | `educational-resources.html` | Teaching materials, guidance and tools, safer alternatives + Baserow submission form |
+| Educational resources | `educational-resources.html` (GenAI Lab) | Teaching materials, guidance and tools, safer alternatives + Baserow submission form |
 | | `genai-resources.html`, `genai-lab.html` | Redirects to `educational-resources.html` (keep old links working) |
 | Footer | `privacy.html`, `accessibility.html` | Privacy notice, accessibility statement |
 | – | `404.html` | "Page not found" (uses absolute `/site/` paths) |
