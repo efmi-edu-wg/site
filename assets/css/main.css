@@ -280,6 +280,8 @@ details[open] summary { margin-bottom: 0.6rem; }
 /* Tall enough for the whole Baserow form, so it never scrolls inside the frame (measured: ~1300px desktop, ~1400px phone) */
 .embed-form-join { height: 84rem; }
 @media (max-width: 40rem) { .embed-form-join { height: 91rem; } }
+.embed-form-share { height: 140rem; }
+@media (max-width: 40rem) { .embed-form-share { height: 150rem; } }
 .embed-fallback { font-size: 0.9rem; color: var(--color-text-muted); margin-top: 0.5rem; }
 
 /* ---------- Dropdown sub-menus ---------- */
