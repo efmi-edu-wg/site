@@ -277,9 +277,9 @@ details[open] summary { margin-bottom: 0.6rem; }
 .container.prose { max-width: var(--max-width); }
 .container.prose > * { max-width: 48rem; }
 .embed-form { display: block; }
-/* Tall enough for the whole Baserow form, so it never scrolls inside the frame (measured: ~1300px desktop, ~1400px phone) */
-.embed-form-join { height: 84rem; }
-@media (max-width: 40rem) { .embed-form-join { height: 91rem; } }
+/* Tall enough for the whole Baserow form, so it never scrolls inside the frame (13 fields incl. profile links: ~2060px desktop, ~2270px phone; re-measure after changing the form) */
+.embed-form-join { height: 132rem; }
+@media (max-width: 40rem) { .embed-form-join { height: 146rem; } }
 .embed-form-share { height: 140rem; }
 @media (max-width: 40rem) { .embed-form-share { height: 150rem; } }
 .embed-fallback { font-size: 0.9rem; color: var(--color-text-muted); margin-top: 0.5rem; }
