@@ -58,7 +58,8 @@ git add -A && git commit -m "Describe your change" && git push
 | | `publications.html` | Publications (with schema.org metadata) |
 | | `projects.html` | European projects |
 | | `open-knowledge.html` | EU open science infrastructures, OER, funding, policy |
-| Educational resources | `educational-resources.html` (GenAI Lab) | Teaching materials, guidance and tools, safer alternatives + Baserow submission form |
+| Educational resources | `educational-resources.html` (GenAI Lab) | Teaching materials, guidance and tools, safer alternatives |
+| | `share-resource.html` | Share a resource: Baserow submission form |
 | | `genai-resources.html`, `genai-lab.html` | Redirects to `educational-resources.html` (keep old links working) |
 | Footer | `privacy.html`, `accessibility.html` | Privacy notice, accessibility statement |
 | – | `404.html` | "Page not found" (uses absolute `/site/` paths) |
@@ -168,7 +169,7 @@ Database **EFMI_EDU_WG** on baserow.io (workspace of Ricardo Correia). Current s
 |---|---|---|---|
 | `participate.html` | Membership form | Members → *Join form* | **embedded** |
 | `programmes.html#add` | Add a programme | Programmes → *Submit form* | **embedded** |
-| `educational-resources.html#share` | Share an educational resource | Educational Resources → *Submit form* (review in *Review queue*) | **embedded** |
+| `share-resource.html` | Share an educational resource | Educational Resources → *Submit form* (review in *Review queue*) | **embedded** |
 | `programmes.html#database` | Programme database | Programmes → *Public* (grid) | placeholder, view not shared yet |
 | `educational-resources.html#shared` | Approved teaching materials | Educational Resources | static cards, added by hand after approval |
 | `educational-resources.html#resources` | Guidance, research and tools | GenAI Resources (older submissions) | static cards |
