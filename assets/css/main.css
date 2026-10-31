@@ -352,6 +352,7 @@ tr[hidden] { display: none; }
 .highlight .meta { color: var(--color-text-muted); font-size: 0.95rem; }
 .highlight > p:not(.meta):not(.highlight-label) { max-width: 52rem; }
 .highlight .btn-row { margin-top: 1rem; }
+.highlight .btn-row + .meta { margin: 0.75rem 0 0; }
 .highlight-label {
   display: inline-block; margin: 0; padding: 0.15rem 0.7rem; border-radius: 999px;
   background: var(--color-primary); color: var(--color-primary-text);

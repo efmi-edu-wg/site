@@ -1,0 +1,32 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//EFMI WG EDU//Open meetings//EN
+METHOD:PUBLISH
+CALSCALE:GREGORIAN
+X-WR-CALNAME:EFMI WG EDU open meetings
+X-WR-CALDESC:Open meetings of the EFMI Working Group on Education. Edit thi
+ s file to add or change meetings.
+BEGIN:VEVENT
+UID:2026-12-10-open-meeting@efmi-edu-wg.github.io
+DTSTAMP:20261031T120000Z
+DTSTART:20261210T090000Z
+DTEND:20261210T103000Z
+SUMMARY:EFMI WG EDU open meeting (online)
+LOCATION:Microsoft Teams
+URL:https://teams.microsoft.com/meet/3157638114375195?p=CNML3tafqjI2eAKYhO
+DESCRIPTION:Open online meeting of the EFMI Working Group on Education (WG 
+ EDU). Everyone interested in biomedical and health informatics education i
+ s welcome\; no WG membership needed.\n\nMicrosoft Teams meeting\nJoin: htt
+ ps://teams.microsoft.com/meet/3157638114375195?p=CNML3tafqjI2eAKYhO\nMeeti
+ ng ID: 315 763 811 437 519 5\nPasscode: w3km3nF6\n\nMore: https://efmi-edu
+ -wg.github.io/site/
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CLASS:PUBLIC
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:EFMI WG EDU open meeting
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+END:VCALENDAR
