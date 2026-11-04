@@ -59,6 +59,7 @@ git add -A && git commit -m "Describe your change" && git push
 | | `projects.html` | European projects |
 | | `open-knowledge.html` | EU open science infrastructures, OER, funding, policy |
 | Educational resources | `educational-resources.html` (GenAI Lab) | Teaching materials, guidance and tools, safer alternatives |
+| | `open-courses.html` | Open courses: the eHealth4all@EU Moodle courses (guest access) |
 | | `share-resource.html` | Share a resource: Baserow submission form |
 | | `genai-resources.html`, `genai-lab.html` | Redirects to `educational-resources.html` (keep old links working) |
 | Footer | `privacy.html`, `accessibility.html` | Privacy notice, accessibility statement |
@@ -111,7 +112,8 @@ is already in the highlight box does not need a card as well. After the event, m
 `data/conference-papers.csv` feeds `conference-papers.html` and the "Education papers and keynotes" section of event pages
 (the browser reads it when the page opens). One row per contribution; `topics` are separated by `;`. Only rows with
 `status` = `Validated` are shown; add `?preview` to the page address to see `Proposed` rows as well. Paste the DOI in `doi`
-when the proceedings are out: the title then links to it. Edit the file in a spreadsheet and save as CSV (UTF-8), or on GitHub.
+when the proceedings are out: the title then links to it. Put the path of a slides PDF (from the site root, e.g.
+`events/.../documents/file.pdf`) in `slides` to show a "Slides (PDF)" link. Edit the file in a spreadsheet and save as CSV (UTF-8), or on GitHub.
 
 ### Add profile links to a member
 In `members.html`, each member has `<span class="profile-links">` with LinkedIn and ORCID links. ORCID iDs were matched by

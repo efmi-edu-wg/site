@@ -374,6 +374,8 @@
       foot.appendChild(a);
     });
     foot.appendChild(el("span", { "class": "paper-link" }, doi ? "doi:" + doi : (href ? "Link: conference programme" : "")));
+    var slides = safeUrl(p.slides || "");
+    if (slides) foot.appendChild(el("a", { "class": "paper-slides", href: (/^https?:/i.test(slides) ? "" : base) + slides, type: "application/pdf" }, "Slides (PDF)"));
     li.appendChild(foot);
     return li;
   }

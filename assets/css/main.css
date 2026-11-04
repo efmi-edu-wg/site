@@ -443,4 +443,5 @@ tr[hidden] { display: none; }
 }
 .paper-tags .tag:hover { border-color: var(--color-link); }
 .paper-link { margin-left: auto; color: var(--color-text-muted); font-size: 0.85rem; }
+.paper-slides { font-size: 0.85rem; font-weight: 600; }
 .paper-download { margin-top: 1.5rem; }
