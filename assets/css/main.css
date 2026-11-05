@@ -215,6 +215,10 @@ html:not(.show-validate) .validate-note { display: none; }
 }
 .callout > :last-child { margin-bottom: 0; }
 
+/* Licence, rights notice and funder logo under a project's resources. */
+.funding-note { margin-top: 2rem; padding-top: 1.25rem; border-top: 1px solid var(--color-border); font-size: 0.9rem; color: var(--color-text-muted); }
+.funding-logo { display: block; width: min(100%, 400px); height: auto; margin-top: 1rem; background: #fff; border-radius: 6px; }
+
 /* Survey call to action: text plus a QR code (white tile so it scans in dark mode too). */
 .survey-cta {
   display: flex; gap: 1.5rem; align-items: center; margin: 2rem 0;
