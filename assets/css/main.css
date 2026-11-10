@@ -381,6 +381,22 @@ tr[hidden] { display: none; }
   font-family: var(--font-heading); font-weight: 700; font-size: 0.8rem;
   letter-spacing: 0.06em; text-transform: uppercase;
 }
+/* Home: perspectives side card (texts for discussion), warm colour to set it apart from news */
+.highlights-layout { display: grid; gap: 1rem; align-items: start; }
+@media (min-width: 64rem) { .highlights-layout { grid-template-columns: minmax(0, 1fr) 22rem; } }
+.perspectives {
+  background: var(--color-warn-bg); border: 1px solid var(--color-border);
+  border-top: 6px solid var(--color-focus); border-radius: var(--radius);
+  padding: 1.35rem 1.5rem;
+}
+.perspectives .highlight-label { background: var(--color-warn); color: var(--color-bg); }
+.perspectives h3 { margin: 0.5rem 0 0.5rem; font-size: 1.2rem; }
+.perspectives-list { list-style: none; padding: 0; margin: 0 0 1rem; }
+.perspectives-list li { padding: 0.65rem 0; border-top: 1px solid var(--color-border); }
+.perspectives-list a { font-weight: 600; line-height: 1.4; }
+.perspectives-list .meta { display: block; margin-top: 0.25rem; color: var(--color-text-muted); font-size: 0.9rem; }
+.perspectives-question { font-size: 0.95rem; }
+.perspectives > p:last-child { margin-bottom: 0; }
 .is-expired, .upcoming-events .grid[hidden], .events-empty[hidden] { display: none; }
 .events-empty { color: var(--color-text-muted); max-width: 52rem; }
 

@@ -95,7 +95,7 @@
     if (el.getAttribute("data-until") < today) el.classList.add("is-expired");
   });
   var hl = document.querySelector(".highlights");
-  if (hl && !hl.querySelector(".highlight:not(.is-expired)")) hl.hidden = true;
+  if (hl && !hl.querySelector(".highlight:not(.is-expired), .perspectives:not(.is-expired)")) hl.hidden = true;
   var ev = document.querySelector(".upcoming-events");
   if (ev && !ev.querySelector(".card:not(.is-expired)")) {
     var list = ev.querySelector(".grid");
