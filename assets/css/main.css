@@ -476,3 +476,7 @@ tr[hidden] { display: none; }
 .paper-link { margin-left: auto; color: var(--color-text-muted); font-size: 0.85rem; }
 .paper-slides { font-size: 0.85rem; font-weight: 600; }
 .paper-download { margin-top: 1.5rem; }
+
+/* Long URLs in citations (e.g. GMDS catalogue) must wrap on phones */
+.card .meta a { overflow-wrap: anywhere; }
+.io-list li { max-width: 52rem; }
